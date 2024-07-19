@@ -22,7 +22,7 @@ in
       systemd.enable = true;
       plugins = [
        #hyprplugins.hyprtrails
-       inputs.hyprland-plugins.packages.${pkgs.system}.hyprbars
+       #inputs.hyprland-plugins.packages.${pkgs.system}.hyprbars
        #hyprplugins.hyprbars
       ];
       extraConfig = let
