@@ -77,9 +77,9 @@ in
   };
 
   # Styling Options
-  stylix.targets.waybar.enable = false;
-  stylix.targets.rofi.enable = false;
-  stylix.targets.hyprland.enable = false;
+  stylix.targets.waybar.enable = true;
+  stylix.targets.rofi.enable = true;
+  stylix.targets.hyprland.enable = true;
   gtk = {
     iconTheme = {
       name = "Papirus-Dark";
@@ -185,7 +185,7 @@ in
       '';
       shellAliases = {
         sv = "sudo nvim";
-        fr = "nh os switch --hostname ${host} /home/${username}/zaneyos";
+        fr = "~/bin/flake-refresh";
         fu = "nh os switch --hostname ${host} --update /home/${username}/zaneyos";
         zu = "sh <(curl -L https://gitlab.com/Zaney/zaneyos/-/raw/main/install-zaneyos.sh)";
         ncg = "nix-collect-garbage --delete-old && sudo nix-collect-garbage -d && sudo /run/current-system/bin/switch-to-configuration boot";
@@ -197,7 +197,7 @@ in
         ".." = "cd ..";
       };
     };
-    home-manager.enable = true;
+    home-manager.enable = true; 
     hyprlock = {
       enable = true;
       settings = {

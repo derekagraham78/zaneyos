@@ -11,46 +11,47 @@
       flake = false;
     };
     # This is required for plugin support.
-     hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
-     hyprland-plugins = {
-       url = "github:hyprwm/hyprland-plugins";
-       inputs.hyprland.follows = "hyprland";
-     };
+    hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
+    hyprland-plugins = {
+      url = "github:hyprwm/hyprland-plugins";
+      inputs.hyprland.follows = "hyprland";
+    };
   };
 
-  outputs =
-    { nixpkgs, home-manager, ... }@inputs:
-    let
-      system = "x86_64-linux";
-      host = "Mulder";
-      username = "dgraham";
-    in
-    {
-      nixosConfigurations = {
-        "${host}" = nixpkgs.lib.nixosSystem {
-          specialArgs = {
-            inherit system;
-            inherit inputs;
-            inherit username;
-            inherit host;
-          };
-          modules = [
-            ./hosts/${host}/config.nix
-            inputs.stylix.nixosModules.stylix
-            home-manager.nixosModules.home-manager
-            {
-              home-manager.extraSpecialArgs = {
-                inherit username;
-                inherit inputs;
-                inherit host;
-              };
-              home-manager.useGlobalPkgs = true;
-              home-manager.useUserPackages = true;
-   	      home-manager.backupFileExtension = "backup1";
-              home-manager.users.${username} = import ./hosts/${host}/home.nix;
-            }
-          ];
+  outputs = {
+    nixpkgs,
+    home-manager,
+    ...
+  } @ inputs: let
+    system = "x86_64-linux";
+    host = "Mulder";
+    username = "dgraham";
+  in {
+    nixosConfigurations = {
+      "${host}" = nixpkgs.lib.nixosSystem {
+        specialArgs = {
+          inherit system;
+          inherit inputs;
+          inherit username;
+          inherit host;
         };
+        modules = [
+          ./hosts/${host}/config.nix
+          inputs.stylix.nixosModules.stylix
+          home-manager.nixosModules.home-manager
+          {
+            home-manager.extraSpecialArgs = {
+              inherit username;
+              inherit inputs;
+              inherit host;
+            };
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.backupFileExtension = "backup1";
+            home-manager.users.${username} = import ./hosts/${host}/home.nix;
+          }
+        ];
       };
     };
+  };
 }

@@ -22,6 +22,7 @@ in
       systemd.enable = true;
       plugins = [
        #hyprplugins.hyprtrails
+       inputs.hyprland-plugins.packages.${pkgs.system}.hyprbars
        #hyprplugins.hyprbars
       ];
       extraConfig = let
@@ -62,7 +63,7 @@ env = XCURSOR_SIZE,32
 workspace = name:1Web,monitor:HDMI-A-3,default:true,persistant:true
 workspace = name:2Terms,monitor:HDMI-A-3,default:true,persistant:true
 workspace = name:3Files,monitor:HDMI-A-3,default:true,persistant:true
-workspace = 4,monitor:HDMI-A-3,default:true,persistant:true
+workspace = name:4Editors,monitor:HDMI-A-3,default:true,persistant:true
 workspace = 5,monitor:HDMI-A-3,default:true,persistant:true
 workspace = name:6Chat,monitor:HDMI-A-1,default:true,persistant:true
 workspace = name:7Misc,monitor:HDMI-A-1,default:true,persistant:true
@@ -110,7 +111,7 @@ windowrulev2 = workspace name:6Chat, class:^(Element)$
 windowrulev2 = workspace name:6Chat, class:^(Signal)$
 windowrulev2 = workspace name:6Chat, class:^(org.telegram.desktop)$
 windowrulev2 = workspace name:1Web, class:^(Vivaldi-stable)$
-windowrulev2 = workspace name:2Terms, class:^(code-url-handler)$
+windowrulev2 = workspace name:4Editors, class:^(Code)$
 windowrulev2 = workspace name:3Files, class:^(org.gnome.Nautilus)$
 windowrulev2 = workspace name:2Terms, class:^(kitty)$
 gestures {
