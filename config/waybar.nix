@@ -157,7 +157,7 @@ in
             escape = true;
           };
           "custom/weather" = {
-          //shows the current weather and forecast
+          #shows the current weather and forecast
           "tooltip" : true,
           "format" : "{}",
           "interval" : 30,
