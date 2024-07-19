@@ -226,18 +226,18 @@ in
 
             #workspaces button.focused {
                 color: #a6adc8;
-                background: #eba0ac;
+                background: #000000;
                 border-radius: 20px;
             }
 
             #workspaces button.urgent {
                 color: #11111b;
-                background: #a6e3a1;
+                background: #000000;
                 border-radius: 20px;
             }
 
             #workspaces button:hover {
-                background: #11111b;
+                background: #000000;
                 color: #cdd6f4;
                 border-radius: 20px;
             }
