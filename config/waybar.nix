@@ -156,7 +156,7 @@ in
             on-click = "sleep 0.1 && task-waybar";
             escape = true;
           };
-          "custom/weather": {
+          "custom/weather" = {
             "format" = "{}°";
             "tooltip" = true;
             "interval" = 3600;
