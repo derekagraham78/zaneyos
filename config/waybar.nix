@@ -160,7 +160,7 @@ in
             "format" = "{}°";
             "tooltip" = true;
             "interval" = 3600;
-            "exec" = "wttrbar";
+            "exec" = "wttrbar --fahrenheit --mph";
             "return-type" = "json";
           };
           "battery" = {
