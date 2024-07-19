@@ -156,13 +156,12 @@ in
             on-click = "sleep 0.1 && task-waybar";
             escape = true;
           };
-          "custom/weather" = {
-          #shows the current weather and forecast
-          "tooltip" = true;
-          "format" = "{}";
-          "interval" = 30;
-          "exec" = "~/.config/waybar/scripts/waybar-wttr.py";
-          "return-type" = "json";
+          "custom/weather": {
+            "format" = "{}°";
+            "tooltip" = true;
+            "interval" = 3600;
+            "exec" = "wttrbar";
+            "return-type" = "json";
           };
           "battery" = {
             states = {

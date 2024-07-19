@@ -258,7 +258,8 @@
   };
 
   environment.systemPackages = with pkgs; [
-    starship 
+    starship
+    wttrbar 
     vscode-with-extensions
     element-desktop
     vivaldi
