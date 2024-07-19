@@ -221,7 +221,7 @@ in
             }
 
             #workspaces button.active {
-                color: #a6adc8;
+                color: #007FF7;
             }
 
             #workspaces button.focused {
