@@ -156,7 +156,7 @@ in
             on-click = "sleep 0.1 && task-waybar";
             escape = true;
           };
-          "custom/weather" : {
+          "custom/weather" = {
           //shows the current weather and forecast
           "tooltip" : true,
           "format" : "{}",
