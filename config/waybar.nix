@@ -158,11 +158,11 @@ in
           };
           "custom/weather" = {
           #shows the current weather and forecast
-          "tooltip" : true,
-          "format" : "{}",
-          "interval" : 30,
-          "exec" : "~/.config/waybar/scripts/waybar-wttr.py",
-          "return-type" : "json"
+          "tooltip" = true,
+          "format" = "{}",
+          "interval" = 30,
+          "exec" = "~/.config/waybar/scripts/waybar-wttr.py",
+          "return-type" = "json"
           },
           "battery" = {
             states = {
