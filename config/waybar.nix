@@ -201,7 +201,7 @@ in
 #waybar {
   background-color: #E9C7FF;
   color: @text;
-  margin: 5px 5px;
+  margin: 3px 3px;
 }
 
 #workspaces {
@@ -246,21 +246,21 @@ in
 }
 #custom-hyprbindings {
   background-color: #E9C7FF;
-  padding: 8px 10px;
+  padding: 5px 10px;
   }
 #custom-notification {
   background-color: #E9C7FF;
-  padding-right: 10px;
+  padding: 5px 30px;
   }
 #backlight,
 #clock,
 #battery,
 #pulseaudio {
-  background-color: @surface0;
+  background-color: #E9C7FF;
   }
 #custom-lock,
 #custom-power {
-  background-color: @surface0;
+  background-color: #E9C7FF;
   padding: 0.5rem 1rem;
   margin: 5px 0;
 }
@@ -268,7 +268,7 @@ in
 #clock {
   background-color: #E9C7FF;
   color: @blue;
-  padding: 8px 30px;
+  padding: 5px 30px;
 }
 
 #battery {
@@ -314,7 +314,7 @@ in
 
 #tray {
   background-color: #E9C7FF;
-  padding: 8px 40px;
+  padding: 5px 40px;
 }
 
 #custom-weather {
@@ -325,14 +325,14 @@ in
 #hyprland-window {
     background-color: #E9C7FF;
     transition: 0.3s;
-    padding: 8px 50px;
+    padding: 5px 50px;
     margin-right: 20px;
 }
 #custom-startmenu {
     background-color: #E9C7FF;
     transition: 0.3s;
     border-radius: 20px;
-    padding: 8px 15px;
+    padding: 5px 15px;
     margin-right: 20px;
 }
       ''
