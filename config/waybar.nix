@@ -221,7 +221,7 @@ in
 }
 
 #workspaces button.active {
-  color: #0008FF;
+  color: #ACADAF;
   background-color: #BD0BAA; 
 }
 
@@ -269,7 +269,7 @@ in
 #clock {
   background-color: #E9C7FF;
   color: @blue;
-  padding: 5px 5px;
+  padding-left: 15px;
 }
 
 #battery {
