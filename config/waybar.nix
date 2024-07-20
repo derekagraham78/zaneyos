@@ -221,7 +221,7 @@ tooltip {
 }
 
 #workspaces button.active {
-    color: #a6adc8;
+    color: #0046FF;
 }
 
 #workspaces button.focused {
@@ -231,14 +231,14 @@ tooltip {
 }
 
 #workspaces button.urgent {
-    color: #11111b;
+    color: #D100FF;
     background: #a6e3a1;
     border-radius: 20px;
 }
 
 #workspaces button:hover {
     background: #11111b;
-    color: #cdd6f4;
+    color: #00FF8C;
     border-radius: 20px;
 }
 
