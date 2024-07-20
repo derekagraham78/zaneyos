@@ -162,6 +162,7 @@ hyprbars {
         # hyprbars-button = color, size, on-click
         hyprbars-button = rgb(ff4040), 10, 󰖭, hyprctl dispatch killactive
         hyprbars-button = rgb(eeee11), 10, , hyprctl dispatch fullscreen 1
+        hyprbars-buttob = rgb(ffffff), 10, ▼, workspace
     }
 }
 dwindle {
@@ -218,8 +219,11 @@ bind = ${modifier},7,workspace,7Misc
 bind = ${modifier},8,workspace,8
 bind = ${modifier},9,workspace,9
 bind = ${modifier},0,workspace,10
-bind = ${modifier}SHIFT,D,workspace, name:Desktop1
-bind = $(modifier)SHIFT,M,workspace, name:Desktop2
+bind = ${modifier}SHIFT,D, togglespecialworkspace, magic
+bind = ${modifier}SHIFT,D, movetoworkspace, +0
+bind = ${modifier}SHIFT,D, togglespecialworkspace, magic
+bind = ${modifier}SHIFT,D, movetoworkspace, special:magic
+bind = ${modifier}SHIFT,D, togglespecialworkspace, magic
 bind = ${modifier}SHIFT,SPACE,movetoworkspace,special
 bind = ${modifier},SPACE,togglespecialworkspace
 bind = ${modifier}SHIFT,1,movetoworkspace,name:1Web
