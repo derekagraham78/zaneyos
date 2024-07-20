@@ -231,18 +231,23 @@ in
 #tray,
 #cpu {
   background-color: #E9C7FF;
+  margin-right: 5px;
 }
 #memory {
   background-color: #E9C7FF;
+  margin-right: 5px;
   }
 #disk {
   background-color: #E9C7FF;
+  margin-right: 5px;
   }
 #network {
   background-color: #E9C7FF;
+  margin-right: 5px;
   }
 #idle_inhibitor {
   background-color: #E9C7FF;
+  margin-right: 5px;
 }
 #custom-hyprbindings {
   background-color: #E9C7FF;
@@ -262,7 +267,7 @@ in
 #custom-power {
   background-color: #E9C7FF;
   padding: 0.5rem 1rem;
-  margin: 5px 0;
+  margin: 5px;
 }
 
 #clock {
