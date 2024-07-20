@@ -327,9 +327,10 @@ in
 #custom-startmenu {
     background-color: @surface0;
     transition: 0.3s;
+    padding: 20px;
 }
 #hyprland-window {
-    background-color: @surface0;
+    background: @surface0;
     transition: 0.3s;
                    }
       ''
