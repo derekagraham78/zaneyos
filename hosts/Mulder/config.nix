@@ -169,7 +169,6 @@
       };
     };
     xfconf.enable = true;
-  };
   virtualisation.docker.enable = true;
   systemd.services.ownership = {
     path = [pkgs.zsh];
