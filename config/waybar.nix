@@ -274,6 +274,7 @@ in
   color: @blue;
   border-radius: 0px 1rem 1rem 0px;
   margin-right: 1rem;
+  padding: 10px 50px;
 }
 
 #battery {
