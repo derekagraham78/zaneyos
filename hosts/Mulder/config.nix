@@ -312,7 +312,6 @@
       ];
     };
   nixpkgs.config.allowUnfree = true;
-  };
   users = {
     mutableUsers = true;
   };
