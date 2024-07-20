@@ -233,12 +233,24 @@ in
 #cpu {
   background-color: @surface0;
 }
-#mem {background-color: @surface0;}
-#disk {background-color: @surface0;}
-#network {background-color: @surface0;}
-#idle_inhibitor {background-color: @surface0;}
-#custom-hyprbindings {background-color: @surface0;}
-#custom-notification {background-color: @surface0;}
+#mem {
+  background-color: @surface0;
+  }
+#disk {
+  background-color: @surface0;
+  }
+#network {
+  background-color: @surface0;
+  }
+#idle_inhibitor {
+  background-color: @surface0;
+}
+#custom-hyprbindings {
+  background-color: @surface0;
+  }
+#custom-notification {
+  background-color: @surface0;
+  }
 #backlight,
 #clock,
 #battery,
