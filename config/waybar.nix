@@ -302,8 +302,6 @@ in
 }
 
 #custom-weather {
-    #color: #f9e2af;
-    #background: #000000;
     border-radius: 20px;
     margin-left: 5px;
     border-right: 0px;
