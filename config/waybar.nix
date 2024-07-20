@@ -241,20 +241,32 @@ in
   }
 #network {
   background-color: @surface0;
+  border-radius: 0px 1rem 1rem 0px;
+  margin-right: 1rem;
   }
 #idle_inhibitor {
   background-color: @surface0;
+  border-radius: 0px 1rem 1rem 0px;
+  margin-right: 1rem;
 }
 #custom-hyprbindings {
   background-color: @surface0;
+  border-radius: 0px 1rem 1rem 0px;
+  margin-right: 1rem;
   }
 #custom-notification {
   background-color: @surface0;
+  border-radius: 0px 1rem 1rem 0px;
+  margin-right: 1rem;
   }
 #backlight,
 #clock,
 #battery,
-#pulseaudio {background-color: @surface0;}
+#pulseaudio {
+  background-color: @surface0;
+  border-radius: 0px 1rem 1rem 0px;
+  margin-right: 1rem;
+  }
 #custom-lock,
 #custom-power {
   background-color: @surface0;
@@ -325,7 +337,7 @@ in
     border-radius: 20px;
 }
 #hyprland-window {
-    background: #F8EEFA;
+    background-color: @surface0;
     transition: 0.3s;
     border-radius: 20px;
 }
