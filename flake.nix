@@ -38,6 +38,7 @@
         modules = [
           ./hosts/${host}/config.nix
           inputs.stylix.nixosModules.stylix
+          inputs.hyprland.nixosModules.default
           home-manager.nixosModules.home-manager
           {
             home-manager.extraSpecialArgs = {

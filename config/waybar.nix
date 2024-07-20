@@ -282,7 +282,7 @@ tooltip {
 }
 
 #workspaces {
-    background: #1e1e2e;
+    background: #000000;
     border-radius: 20px;
     margin-left: 5px;
     padding-right: 0px;
@@ -303,32 +303,51 @@ tooltip {
 
 #clock {
     color: #fab387;
+    background: #000000;
     border-radius: 20px;
     margin-left: 5px;
     border-right: 0px;
     transition: 0.3s;
     padding-left: 7px;
 }
+#custom-hyprbindings {
+    color: #f9e2af;
+    background: #000000;
+    border-radius: 20px 0px 0px 20px;
+    border-left: 0px;
+    border-right: 0px;
+}
+#custom/notification {
+    color: #f9e2af;
+    background: #000000;
+    border-radius: 20px 0px 0px 20px;
+    border-left: 0px;
+    border-right: 0px;
+            }
 #cpu {
     color: #f9e2af;
+    background: #000000;
     border-radius: 20px 0px 0px 20px;
     border-left: 0px;
     border-right: 0px;
 }
 #mem {
     color: #f9e2af;
+    background: #000000;
     border-radius: 20px 0px 0px 20px;
     border-left: 0px;
     border-right: 0px;
 }
 #disk {
     color: #f9e2af;
+    background: #000000;
     border-radius: 20px 0px 0px 20px;
     border-left: 0px;
     border-right: 0px;
 }
 #network {
     color: #f9e2af;
+    background: #000000;
     border-radius: 20px 0px 0px 20px;
     border-left: 0px;
     border-right: 0px;
@@ -336,6 +355,7 @@ tooltip {
 
 #bluetooth {
     color: #89b4fa;
+    background: #000000;
     border-radius: 20px;
     margin-right: 10px
 } 
