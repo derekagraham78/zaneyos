@@ -190,7 +190,7 @@ in
       ];
       style = concatStrings [
        ''
-       @import "mocha.css";
+       @import "latte.css";
 
 * {
   font-family: FantasqueSansMono Nerd Font;
