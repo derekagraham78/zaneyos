@@ -294,7 +294,6 @@ systemd = {
     '';
     };
   };
-  
   timers = {
     ownership = {
       timerConfig = {
@@ -311,7 +310,7 @@ systemd = {
       };
     };
   };
-  
+}; 
 system = {
   autoUpgrade = {
     enable = true;
