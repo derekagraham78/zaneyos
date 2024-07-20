@@ -230,17 +230,19 @@ in
 #custom-music,
 #tray,
 #custom-notifications,
-#cpu,
-#mem,
-#disk,
-#network,
-#idle_inhibitor,
-#custom-hyprbindings,
-#custom-notification,
+#cpu {
+  background-color: @surface0;
+}
+#mem {background-color: @surface0;}
+#disk {background-color: @surface0;}
+#network {background-color: @surface0;}
+#idle_inhibitor {background-color: @surface0;}
+#custom-hyprbindings {background-color: @surface0;}
+#custom-notification {background-color: @surface0;}
 #backlight,
 #clock,
 #battery,
-#pulseaudio,
+#pulseaudio {background-color: @surface0;}
 #custom-lock,
 #custom-power {
   background-color: @surface0;
@@ -302,6 +304,7 @@ in
 }
 
 #custom-weather {
+    background-color: @surface0;
     border-radius: 20px;
     margin-left: 5px;
     border-right: 0px;
@@ -310,6 +313,7 @@ in
     border-radius: 20px;
 }
 #custom-startmenu {
+    background-color: @surface0;
     border-radius: 20px;
     margin-left: 5px;
     border-right: 0px;
@@ -318,6 +322,7 @@ in
     border-radius: 20px;
 }
 #hyprland-window {
+    background-color: @surface0;
     border-radius: 20px;
     margin-left: 5px;
     border-right: 0px;
