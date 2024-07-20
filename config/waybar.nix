@@ -326,13 +326,14 @@ in
     background-color: #E9C7FF;
     transition: 0.3s;
     padding: 8px 50px;
-    margin-right: 10px;
+    margin-right: 20px;
 }
 #custom-startmenu {
     background-color: #E9C7FF;
     transition: 0.3s;
     border-radius: 20px;
     padding: 8px 15px;
+    margin-right: 20px;
 }
       ''
       ];
