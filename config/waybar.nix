@@ -324,15 +324,17 @@ in
     padding-left: 7px;  
     border-radius: 20px;
 }
-#custom-startmenu {
-    background-color: @surface0;
-    transition: 0.3s;
-    padding: 8px;
-}
 #hyprland-window {
     background: #F8EEFA;
     transition: 0.3s;
-                   }
+    border-radius: 20px;
+}
+#custom-startmenu {
+    background-color: @surface0;
+    transition: 0.3s;
+    border-radius: 20px;
+    padding: 8px;
+}
       ''
       ];
     };
