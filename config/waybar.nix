@@ -276,12 +276,14 @@ tooltip {
 }
 
 #tray {
+    background: #000000;
     border-radius: 20px;
     margin-right: 5px;
     padding: 0px 4px;
 }
 
 #workspaces {
+    color: #ffffff;
     background: #000000;
     border-radius: 20px;
     margin-left: 5px;
@@ -290,6 +292,7 @@ tooltip {
 }
 
 #custom-power_profile {
+    background: #000000;
     color: #a6e3a1;
     border-left: 0px;
     border-right: 0px;
@@ -334,34 +337,49 @@ tooltip {
 #mem {
     color: #f9e2af;
     background: #000000;
-    border-radius: 20px 0px 0px 20px;
-    border-left: 0px;
+    border-radius: 20px;
+    margin-left: 5px;
     border-right: 0px;
+    transition: 0.3s;
+    padding-left: 7px;
 }
 #disk {
     color: #f9e2af;
     background: #000000;
-    border-radius: 20px 0px 0px 20px;
-    border-left: 0px;
+    border-radius: 20px;
+    margin-left: 5px;
     border-right: 0px;
+    transition: 0.3s;
+    padding-left: 7px;
 }
 #network {
     color: #f9e2af;
     background: #000000;
-    border-radius: 20px 0px 0px 20px;
-    border-left: 0px;
+    border-radius: 20px;
+    margin-left: 5px;
     border-right: 0px;
+    transition: 0.3s;
+    padding-left: 7px;
 }
 
 #bluetooth {
     color: #89b4fa;
     background: #000000;
     border-radius: 20px;
-    margin-right: 10px
+    margin-left: 5px;
+    border-right: 0px;
+    transition: 0.3s;
+    padding-left: 7px;
 } 
 
 #pulseaudio {
     color: #89b4fa;
+    border-radius: 20px;
+    background: #000000;
+    margin-left: 5px;
+    border-right: 0px;
+    transition: 0.3s;
+    padding-left: 7px;
     border-left: 0px;
     border-right: 0px;
 }
@@ -383,19 +401,35 @@ tooltip {
 }
 
 #custom-weather {
+    color: #f9e2af;
+    background: #000000;
     border-radius: 20px;
+    margin-left: 5px;
     border-right: 0px;
-    margin-left: 0px;
+    transition: 0.3s;
+    padding-left: 7px;  
+    border-radius: 20px;
 }
             #custom-startmenu {
               color: #ffffff;
               background: #000000;
-              padding-right: 8px;
+              border-radius: 20px;
+    margin-left: 5px;
+    border-right: 0px;
+    transition: 0.3s;
+    padding-left: 7px;  
+    border-radius: 20px;
             }
             #hyprland-window {
               color: #ffffff;
               background: #000000;
-              padding-right: 8px;
+              border-radius: 20px;
+    margin-left: 5px;
+    border-right: 0px;
+    transition: 0.3s;
+    padding-left: 7px;  
+    border-radius: 20px;
+              
             }
       ''
       ];
