@@ -330,8 +330,8 @@ in
 #hyprland-window {
     background-color: #E9C7FF;
     transition: 0.3s;
-    margin-right: 40px;
-    padding-right: 20px;
+    margin-right: 60px;
+    padding-right: 60px;
 }
 #custom-startmenu {
     background-color: #E9C7FF;
