@@ -216,7 +216,7 @@ in
 
             #workspaces button {
                 padding: 5px;
-                color: #313244;
+                color: #000000;
                 margin-right: 5px;
             }
 
