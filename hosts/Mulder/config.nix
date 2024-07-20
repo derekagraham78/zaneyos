@@ -260,9 +260,9 @@
   environment.systemPackages = with pkgs; [
     starship
     hyprlandPlugins.hyprbars
-    hyprlandPlugins.hyprexpo
-    hyprlandPlugins.hyprtrails
-    hyprlandPlugins.hypr-dynamic-cursors
+    #hyprlandPlugins.hyprexpo
+    #hyprlandPlugins.hyprtrails
+    #hyprlandPlugins.hypr-dynamic-cursors
     wttrbar 
     vscode-with-extensions
     element-desktop
