@@ -318,7 +318,7 @@ in
 
 #tray {
   margin-right: 1rem;
-  border-radius: 90px;
+  padding: 25px 50px;
 }
 
 #custom-weather {
@@ -336,11 +336,11 @@ in
     border-radius: 20px;
 }
 #custom-startmenu {
-    background-color: @surface0;
+    background-color: black;
     transition: 0.3s;
     border-radius: 20px;
     margin-right: 30px;
-    padding: 8px;
+    padding: 25px 50px;
 }
       ''
       ];
