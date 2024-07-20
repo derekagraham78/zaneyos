@@ -220,6 +220,7 @@ in
 
 #workspaces button.active {
   color: #0008FF;
+  background-color: #E9C7FF;
 }
 
 #workspaces button:hover {
