@@ -200,7 +200,7 @@ in
 }
 
 #waybar {
-  background-color: #AAB7B8;
+  background-color: #E9C7FF;
   color: @text;
   margin: 3px 3px;
 }
@@ -320,6 +320,7 @@ in
 }
 #hyprland-window {
     background-color: #AAB7B8;
+    color: blue;
     transition: 0.3s;
     margin-right: 60px;
     padding-right: 60px;
