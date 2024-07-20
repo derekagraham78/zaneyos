@@ -246,11 +246,11 @@ in
 }
 #custom-hyprbindings {
   background-color: #E9C7FF;
-  padding: 10px 30px;
+  padding: 8px 10px;
   }
 #custom-notification {
   background-color: #E9C7FF;
-  padding-right: 15px;
+  padding-right: 10px;
   }
 #backlight,
 #clock,
@@ -268,7 +268,7 @@ in
 #clock {
   background-color: #E9C7FF;
   color: @blue;
-  padding: 10px 50px;
+  padding: 8px 30px;
 }
 
 #battery {
@@ -293,6 +293,7 @@ in
 
 #pulseaudio {
   background-color: #E9C7FF;
+  margin-left: 10px;
 }
 
 #custom-music {
@@ -313,25 +314,25 @@ in
 
 #tray {
   background-color: #E9C7FF;
-  padding: 10px 40px;
+  padding: 8px 40px;
 }
 
 #custom-weather {
     background-color: #E9C7FF;
     transition: 0.3s;
-    padding: 10px 20px;
+    padding: 8px 8px;
 }
 #hyprland-window {
     background-color: #E9C7FF;
     transition: 0.3s;
-    padding: 10px 50px;
+    padding: 8px 50px;
     margin-right: 10px;
 }
 #custom-startmenu {
     background-color: #E9C7FF;
     transition: 0.3s;
     border-radius: 20px;
-    padding: 10px 15px;
+    padding: 8px 15px;
 }
       ''
       ];
