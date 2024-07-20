@@ -251,7 +251,6 @@ in
   }
 #custom-notification {
   background-color: #E9C7FF;
-  padding: 5px 30px;
   }
 #backlight,
 #clock,
