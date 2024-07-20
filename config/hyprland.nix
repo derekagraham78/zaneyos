@@ -115,6 +115,7 @@ windowrulev2 = workspace name:1Web, class:^(Vivaldi-stable)$
 windowrulev2 = workspace name:4Editors, class:^(Code)$
 windowrulev2 = workspace name:3Files, class:^(org.gnome.Nautilus)$
 windowrulev2 = workspace name:2Terms, class:^(kitty)$
+#windowrulev2 = float,class:^()$
 exec-once = discord
 exec-once = telegram-desktop
 exec-once = org.signal.Signal

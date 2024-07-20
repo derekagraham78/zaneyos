@@ -500,6 +500,9 @@ environment.systemPackages = with pkgs; [
     fmt
     geekbench
     rPackages.trekfont
+    pkgs.mate.mate-system-monitor
+    pkgs.deepin.deepin-system-monitor
+    pkgs.gnome-system-monitor
   ];
   fonts.packages = with pkgs; [
     noto-fonts-emoji
