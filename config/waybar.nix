@@ -241,8 +241,6 @@ in
   }
 #network {
   background-color: @surface0;
-  border-radius: 0px 1rem 1rem 0px;
-  margin-right: 1rem;
   }
 #idle_inhibitor {
   background-color: @surface0;
@@ -264,8 +262,6 @@ in
 #battery,
 #pulseaudio {
   background-color: @surface0;
-  border-radius: 0px 1rem 1rem 0px;
-  margin-right: 1rem;
   }
 #custom-lock,
 #custom-power {
