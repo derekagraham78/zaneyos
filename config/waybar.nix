@@ -56,7 +56,7 @@ in
             tooltip-format = "<big>{:%A, %B %d, %Y }</big>\n";
           };
           "hyprland/window" = {
-            max-length = 22;
+            max-length = 30;
             separate-outputs = false;
             rewrite = {
               "" = " 🙈 No Windows? ";
@@ -208,19 +208,19 @@ in
 #workspaces {
   border-radius: 1rem;
   margin: 5px;
-  background-color: #BD0BAA;
+  background-color: #4DCAEC;
   margin-left: 1rem;
 }
 
 #workspaces button {
-  color: #4DCAEC;
+  color: #E9C7FF;
   border-radius: 1rem;
   padding: 0.4rem;
 }
 
 #workspaces button.active {
   color: #0008FF;
-  background-color: #E9C7FF;
+  background-color: #BD0BAA; 
 }
 
 #workspaces button:hover {
