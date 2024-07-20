@@ -311,7 +311,7 @@
       ];
     };
   };
-  nixp`kgs.config.allowUnfree = true;
+  nixpkgs.config.allowUnfree = true;
   };
   users = {
     mutableUsers = true;
