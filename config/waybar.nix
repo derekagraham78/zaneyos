@@ -251,8 +251,10 @@ in
   margin-right: 1rem;
   }
 #custom-notification {
-  background-color: @surface0;
+  background-color: #000000;
   border-radius: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
   }
 #backlight,
 #clock,
