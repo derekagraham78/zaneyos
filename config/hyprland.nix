@@ -63,6 +63,8 @@ workspace = name:2Terms,monitor:HDMI-A-3,default:true,persistant:true
 workspace = name:3Files,monitor:HDMI-A-3,default:true,persistant:true
 workspace = name:4Editors,monitor:HDMI-A-3,default:true,persistant:true
 workspace = 5,monitor:HDMI-A-3,default:true,persistant:true
+workspace = name:Desktop,persistant:true
+
 workspace = name:6Chat,monitor:HDMI-A-1,default:true,persistant:true
 workspace = name:7Misc,monitor:HDMI-A-1,default:true,persistant:true
 workspace = 8,monitor:HDMI-A-1,default:true,persistant:true
@@ -189,6 +191,7 @@ bind = ${modifier},P,pseudo,
 bind = ${modifier}SHIFT,I,togglesplit,
 bind = ${modifier},F,fullscreen,
 bind = ${modifier}SHIFT,F,togglefloating,
+bind = ${modifier}SHIFT,D,workspace,name:Desktop
 bind = ${modifier}SHIFT,C,exit,
 bind = ${modifier}SHIFT,left,movewindow,l
 bind = ${modifier}SHIFT,right,movewindow,r
