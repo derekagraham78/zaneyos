@@ -48,7 +48,6 @@ exec-once = killall -q swww;sleep .5 && swww init
 exec-once = killall -q waybar;sleep .5 && waybar
 exec-once = killall -q swaync;sleep .5 && swaync
 exec-once = nm-applet --indicator
-exec-once = waybar
 exec-once = lxqt-policykit-agent
 exec-once = sleep 1.5 && swww img /home/${username}/Pictures/Wallpapers/beautifulmountainscape.jpg
 monitor=HDMI-A-3, 1920x1080, 0x0, 1
@@ -156,7 +155,7 @@ hyprtrails {
 hyprbars {
         # example config
         bar_height = 20
-        bar_color = rgb(#58D68D)
+        bar_color = rgb(58D68D)
         # example buttons (R -> L)
         # hyprbars-button = color, size, on-click
         hyprbars-button = rgb(ff4040), 10, 󰖭, hyprctl dispatch killactive
