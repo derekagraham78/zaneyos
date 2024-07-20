@@ -196,6 +196,7 @@ in
 * {
   font-family: FantasqueSansMono Nerd Font;
   font-size: 17px;
+  font-weight: bold;
   min-height: 0;
 }
 
@@ -208,7 +209,7 @@ in
 #workspaces {
   border-radius: 1rem;
   margin: 5px;
-  background-color: #4DCAEC;
+  background-color: #E9C7FF;
   margin-left: 1rem;
 }
 
