@@ -330,7 +330,7 @@ in
     padding: 8px;
 }
 #hyprland-window {
-    background: @surface0;
+    background: #F8EEFA;
     transition: 0.3s;
                    }
       ''
