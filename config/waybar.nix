@@ -233,7 +233,7 @@ in
 #cpu {
   background-color: @surface0;
 }
-#mem {
+#memory {
   background-color: @surface0;
   }
 #disk {
@@ -328,7 +328,7 @@ in
     background-color: @surface0;
     border-radius: 20px;
     margin-left: 5px;
-    border-right: 0px;
+    border-right: 10px;
     transition: 0.3s;
     padding-left: 7px;  
     border-radius: 20px;
