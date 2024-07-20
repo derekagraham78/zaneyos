@@ -200,7 +200,7 @@ in
 }
 
 #waybar {
-  background-color: #AAB7B8;
+  background-color: #E9C7FF;
   color: @text;
   margin: 3px 3px;
 }
