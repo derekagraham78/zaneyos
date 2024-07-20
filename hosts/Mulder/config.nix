@@ -310,7 +310,6 @@
         thunar-volman
       ];
     };
-  };
   nixpkgs.config.allowUnfree = true;
   };
   users = {
