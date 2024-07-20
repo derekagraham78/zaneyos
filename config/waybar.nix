@@ -311,20 +311,16 @@ in
     padding-left: 7px;  
     border-radius: 20px;
 }
-            #custom-startmenu {
-              #color: #ffffff;
-              #background: #000000;
-              border-radius: 20px;
+#custom-startmenu {
+    border-radius: 20px;
     margin-left: 5px;
     border-right: 0px;
     transition: 0.3s;
     padding-left: 7px;  
     border-radius: 20px;
-            }
-            #hyprland-window {
-              #color: #ffffff;
-              #background: #000000;
-              border-radius: 20px;
+}
+#hyprland-window {
+    border-radius: 20px;
     margin-left: 5px;
     border-right: 0px;
     transition: 0.3s;
