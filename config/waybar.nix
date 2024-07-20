@@ -207,7 +207,7 @@ in
 #workspaces {
   border-radius: 1rem;
   margin: 5px;
-  background-color: @surface0;
+  background-color: #E9C7FF;
   margin-left: 1rem;
 }
 
@@ -230,32 +230,27 @@ in
 #custom-music,
 #tray,
 #cpu {
-  background-color: @surface0;
+  background-color: #E9C7FF;
 }
 #memory {
-  background-color: @surface0;
+  background-color: #E9C7FF;
   }
 #disk {
-  background-color: @surface0;
+  background-color: #E9C7FF;
   }
 #network {
-  background-color: @surface0;
+  background-color: #E9C7FF;
   }
 #idle_inhibitor {
-  background-color: @surface0;
+  background-color: #E9C7FF;
 }
 #custom-hyprbindings {
-  background-color: @surface0;
-  border-radius: 20px;
-  margin-right: 1rem;
+  background-color: #E9C7FF;
+  padding: 10px 30px;
   }
 #custom-notification {
-  background-color: #000000;
-  border-radius: 20px;
-  padding-left: 10px;
-  margin-left: 30px;
-  margin-right: 30px;
-  padding-right: 10px;
+  background-color: #E9C7FF;
+  padding-right: 15px;
   }
 #backlight,
 #clock,
@@ -296,7 +291,7 @@ in
 }
 
 #pulseaudio {
-  color: @maroon;
+  background-color: #E9C7FF;
 }
 
 #custom-music {
@@ -316,28 +311,25 @@ in
 }
 
 #tray {
-  padding: 10px 80px;
+  background-color: #E9C7FF;
+  padding: 10px 40px;
 }
 
 #custom-weather {
-    background-color: @surface0;
-    border-radius: 20px;
-    margin-left: 5px;
-    border-right: 0px;
+    background-color: #E9C7FF;
     transition: 0.3s;
-    padding-left: 7px;  
-    border-radius: 20px;
+    padding: 10px 20px;
 }
 #hyprland-window {
     background-color: #E9C7FF;
     transition: 0.3s;
-    border-radius: 20px;
+    padding: 10px 30px;
 }
 #custom-startmenu {
     background-color: #E9C7FF;
     transition: 0.3s;
     border-radius: 20px;
-    padding: 10px 30px;
+    padding: 10px 15px;
 }
       ''
       ];
