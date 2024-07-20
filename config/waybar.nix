@@ -352,6 +352,14 @@ in
                 border-right: 0px;
                 margin-left: 0px;
             }
+            #custom/startmenu {
+              color: #003AFF
+              background: #000000
+            }
+            #hyprland/window {
+              color: #003AFF
+              background: #000000
+            }
       ''
       ];
     };
