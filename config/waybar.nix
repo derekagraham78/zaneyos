@@ -253,8 +253,8 @@ in
   background-color: #000000;
   border-radius: 20px;
   padding-left: 10px;
-  margin-left: 10px;
-  margin-right: 10px;
+  margin-left: 30px;
+  margin-right: 30px;
   padding-right: 10px;
   }
 #backlight,

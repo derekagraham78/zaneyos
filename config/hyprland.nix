@@ -21,9 +21,7 @@ in
       xwayland.enable = true;
       systemd.enable = true;
       plugins = [
-       #hyprplugins.hyprtrails
-       #inputs.hyprland-plugins.packages.${pkgs.system}.hyprbars
-       #shyprplugins.hyprbars
+       pkgs.hyprplugins.hyprtrails
        pkgs.hyprlandPlugins.hyprbars
       ];
       extraConfig = let
@@ -154,8 +152,8 @@ ignore_opacity = off
 }
 }
 plugin {
-#hyprtrails {
-#}
+hyprtrails {
+}
 hyprbars {
         # example config
         bar_height = 20
