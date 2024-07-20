@@ -219,7 +219,7 @@ in
 }
 
 #workspaces button.active {
-  color: @sky;
+  color: @blue;
 }
 
 #workspaces button:hover {
