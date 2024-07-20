@@ -17,7 +17,7 @@ in
         {
           layer = "top";
           position = "top";
-          height = 10;
+          height = 5;
           modules-center = ["hyprland/workspaces"];
           modules-left = [
             "custom/startmenu"
