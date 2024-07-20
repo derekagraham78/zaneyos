@@ -21,8 +21,8 @@ in
       xwayland.enable = true;
       systemd.enable = true;
       plugins = [
-       pkgs.hyprplugins.hyprtrails
-       pkgs.hyprlandPlugins.hyprbars
+      pkgs.hyprlandPlugins.hyprtrails
+      pkgs.hyprlandPlugins.hyprbars
       ];
       extraConfig = let
         modifier = "SUPER";
