@@ -261,7 +261,7 @@ in
 #clock,
 #battery,
 #pulseaudio {
-  background-color: #EDCD9DE;
+  background-color: #DCD9DE;
   }
 #custom-lock,
 #custom-power {
@@ -297,7 +297,7 @@ in
 }
 
 #pulseaudio {
-  background-color: #E9C7FF;
+  background-color: #DCD9DE;
   margin-left: 50px;
 }
 
