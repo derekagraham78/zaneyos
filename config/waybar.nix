@@ -222,25 +222,25 @@ in
             }
 
             #workspaces button.active {
-                color: #007FF7;
+                color: #003AFF;
                 background: #000000;
             }
 
             #workspaces button.focused {
-                color: #a6adc8;
+                color: #09FF00;
                 background: #000000;
                 border-radius: 20px;
             }
 
             #workspaces button.urgent {
-                color: #11111b;
+                color: #F400FF;
                 background: #000000;
                 border-radius: 20px;
             }
 
             #workspaces button:hover {
                 background: #000000;
-                color: #cdd6f4;
+                color: #00FF8C;
                 border-radius: 20px;
             }
 
