@@ -319,7 +319,7 @@ in
 
 #tray {
   background-color: #E9C7FF;
-  padding: 5px 40px;
+  padding: 5px 5px;
 }
 
 #custom-weather {
