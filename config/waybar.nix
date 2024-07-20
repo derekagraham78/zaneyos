@@ -215,13 +215,13 @@ in
 }
 
 #workspaces button {
-  color: #E9C7FF;
+  color: #000000;
   border-radius: 1rem;
   padding: 0.4rem;
 }
 
 #workspaces button.active {
-  color: #ACADAF;
+  color: #ffffff;
   background-color: #BD0BAA; 
 }
 
@@ -269,7 +269,7 @@ in
 #clock {
   background-color: #E9C7FF;
   color: @blue;
-  padding-left: 15px;
+  margin-left: 15px;
 }
 
 #battery {
