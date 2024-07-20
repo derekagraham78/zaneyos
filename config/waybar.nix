@@ -50,7 +50,7 @@ in
             format =
               if clock24h == true
               then '' {:L%H:%M}''
-              else '' {:L%A, %B %d, %Y %I:%M %p}'';
+              else '' {:L%A, %B %d, %Y %I:%M:%S %p}'';
             tooltip = true;
             tooltip-format = "<big>{:%A, %B %d, %Y }</big>\n";
           };
@@ -317,8 +317,7 @@ in
 }
 
 #tray {
-  margin-right: 1rem;
-  padding: 25px 50px;
+  padding: 10px 80px;
 }
 
 #custom-weather {
@@ -331,7 +330,7 @@ in
     border-radius: 20px;
 }
 #hyprland-window {
-    background-color: @surface0;
+    background-color: purple;
     transition: 0.3s;
     border-radius: 20px;
 }
@@ -339,8 +338,7 @@ in
     background-color: black;
     transition: 0.3s;
     border-radius: 20px;
-    margin-right: 30px;
-    padding: 25px 50px;
+    padding: 10px 30px;
 }
       ''
       ];
