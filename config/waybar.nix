@@ -200,7 +200,6 @@ in
 
 #waybar {
   background-color: #E9C7FF;
-  #background: transparent;
   color: @text;
   margin: 5px 5px;
 }
