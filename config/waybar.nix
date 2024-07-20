@@ -244,12 +244,10 @@ in
   }
 #idle_inhibitor {
   background-color: @surface0;
-  border-radius: 0px 1rem 1rem 0px;
-  margin-right: 1rem;
 }
 #custom-hyprbindings {
   background-color: @surface0;
-  border-radius: 0px 1rem 1rem 0px;
+  border-radius: 20px;
   margin-right: 1rem;
   }
 #custom-notification {
@@ -298,8 +296,6 @@ in
 
 #pulseaudio {
   color: @maroon;
-  border-radius: 1rem 0px 0px 1rem;
-  margin-left: 1rem;
 }
 
 #custom-music {

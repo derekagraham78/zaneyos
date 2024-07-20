@@ -158,7 +158,7 @@ plugin {
 hyprbars {
         # example config
         bar_height = 20
-
+        bar_color = rgb(#58D68D)
         # example buttons (R -> L)
         # hyprbars-button = color, size, on-click
         hyprbars-button = rgb(ff4040), 10, 󰖭, hyprctl dispatch killactive
