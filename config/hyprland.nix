@@ -116,7 +116,7 @@ windowrulev2 = workspace name:3Files, class:^(org.gnome.Nautilus)$
 windowrulev2 = workspace name:2Terms, class:^(kitty)$
 gestures {
 workspace_swipe = true
-workspace_swipe_fingers = 3
+workspace_swipe_fingers   = 3
 }
 misc {
 initial_workspace_tracking = 0
@@ -192,6 +192,8 @@ bind = ${modifier}SHIFT,I,togglesplit,
 bind = ${modifier},F,fullscreen,
 bind = ${modifier}SHIFT,F,togglefloating,
 bind = ${modifier}SHIFT,D,movetoworkspace, special:minimized
+bind = $(modifier)CONTROL,D,togglespecialworkspace, minimized
+bind = $(modifier)CONTROL,D,movetoworkspace, +0
 bind = ${modifier}SHIFT,C,exit,
 bind = ${modifier}SHIFT,left,movewindow,l
 bind = ${modifier}SHIFT,right,movewindow,r
