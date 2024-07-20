@@ -318,7 +318,7 @@ in
 
 #tray {
   margin-right: 1rem;
-  border-radius: 1rem;
+  border-radius: 20px;
 }
 
 #custom-weather {
