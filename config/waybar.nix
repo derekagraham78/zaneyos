@@ -51,7 +51,7 @@ in
             format =
               if clock24h == true
               then '' {:L%H:%M}''
-              else '' {:L%A, %B %d, %Y %I:%M %p}'';
+              else '' {:L %A, %B %d, %Y %I:%M %p}'';
             tooltip = true;
             tooltip-format = "<big>{:%A, %B %d, %Y }</big>\n";
           };
