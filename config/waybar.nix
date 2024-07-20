@@ -207,7 +207,7 @@ in
 #workspaces {
   border-radius: 1rem;
   margin: 5px;
-  background-color: #E9C7FF;
+  background-color: #DCD9DE;
   margin-left: 1rem;
 }
 
@@ -230,38 +230,38 @@ in
 #custom-music,
 #tray,
 #cpu {
-  background-color: #E9C7FF;
+  background-color: #DCD9DE;
   margin-right: 5px;
 }
 #memory {
-  background-color: #E9C7FF;
+  background-color: #DCD9DE;
   margin-right: 5px;
   }
 #disk {
-  background-color: #E9C7FF;
+  background-color: #DCD9DE;
   margin-right: 5px;
   }
 #network {
-  background-color: #E9C7FF;
+  background-color: #DCD9DE;
   margin-right: 5px;
   }
 #idle_inhibitor {
-  background-color: #E9C7FF;
+  background-color: #DCD9DE;
   margin-right: 5px;
 }
 #custom-hyprbindings {
-  background-color: #E9C7FF;
-  padding: 5px 10px;
+  background-color: #DCD9DE;
+  padding: 5px 5px;
   }
 #custom-notification {
-  background-color: #E9C7FF;
+  background-color: #DCD9DE;
   padding: 5px 30px;
   }
 #backlight,
 #clock,
 #battery,
 #pulseaudio {
-  background-color: #E9C7FF;
+  background-color: #EDCD9DE;
   }
 #custom-lock,
 #custom-power {
@@ -318,7 +318,7 @@ in
 }
 
 #tray {
-  background-color: #E9C7FF;
+  background-color: #DCD9DE;
   padding: 5px 5px;
 }
 
