@@ -210,6 +210,7 @@ in
   border-radius: 1rem;
   margin: 5px;
   background-color: #E9C7FF;
+  color: #ffffff;
   margin-left: 1rem;
 }
 
