@@ -11,7 +11,6 @@
   imports = [
     ./hardware.nix
     ./users.nix
-    ./imported-config.nix
     ./mysql.nix
     ./nginx.nix
     ../../modules/amd-drivers.nix
@@ -155,6 +154,68 @@
   #  };
 
   programs = {
+        git = {
+      enable = true;
+      #  userName = "derekagraham78";
+      #  userEmail = "derekagraham78@icloud.com";
+    };
+    zsh = {
+      enable = false;
+      # Your zsh config
+      ohMyZsh = {
+        enable = true;
+        plugins = ["git" "python" "man" "1password"];
+        theme = "aussiegeek";
+      };
+    };
+    xfconf.enable = true;
+  };
+  virtualisation.docker.enable = true;
+  systemd.services.ownership = {
+    path = [pkgs.zsh];
+    serviceConfig = {
+      ExecStart = "/root/bin/ownership-update";
+      wantedBy = ["default.target"];
+      Type = "oneshot";
+      User = "root";
+    };
+  };
+  systemd.timers.ownership = {
+    timerConfig = {
+      OnBootSec = "15m";
+      OnUnitActiveSec = "15m";
+      Unit = "ownership.service";
+    };
+  };
+
+  systemd.services.backupmyconfs = {
+    path = [pkgs.zsh];
+    serviceConfig = {
+      ExecStart = "/home/dgraham/bin/check4update";
+      wantedBy = ["default.target"];
+      Type = "oneshot";
+      User = "dgraham";
+    };
+  };
+  systemd.timers.backupmyconfs = {
+    timerConfig = {
+      OnBootSec = "60m";
+      OnUnitActiveSec = "60m";
+      Unit = "backupmyconfs.service";
+    };
+  };
+  system.autoUpgrade = {
+    enable = true;
+    flake = "github:derekagraham78/nixos/flake.nix";
+    flags = [
+      "--update-input"
+      "nixpkgs"
+      "-L" # print build logs
+    ];
+    dates = "02:00";
+    randomizedDelaySec = "45min";
+  };
+
     hyprland.enable = true;
     xwayland.enable = true;
     firefox.enable = true;
@@ -265,7 +326,7 @@
     vivaldi
     floorp
     vivaldi-ffmpeg-codecs
-	aspell
+	  aspell
     nanorc
     vim
     variety
@@ -283,7 +344,6 @@
     unzip
     unrar
     libnotify
-#    v4l-utils
     ydotool
     duf
     ncdu
@@ -325,6 +385,111 @@
     spotify
     neovide
     greetd.gtkgreet
+    helix
+    filezilla
+    imagemagick
+    cockpit
+    gnome-disk-utility
+    gparted
+    whois
+    docker-compose
+    deadnix
+    slack
+    cachix
+    statix
+    wev
+    w3m
+    deluge-gtk
+    sushi
+    clipmenu
+    emojipick
+    noisetorch
+    gh
+    libsixel
+    file
+    hddtemp
+    ipmitool
+    mdadm
+    smartmontools
+    glxinfo
+    wmctrl
+    xorg.xdpyinfo
+    usbutils
+    zip
+    xz
+    p7zip
+    # utils
+    jq # A lightweight and flexible command-li>
+    # networking tools
+    networkmanager
+    mtr # A network diagnostic tool
+    iperf3
+    dnsutils # `dig` + `nslookup`
+    ldns # replacement of `dig`, it provide th>
+    aria2 # A lightweight multi-protocol & mul>
+    nmap # A utility for network discovery and>
+    ipcalc # it is a calculator for the IPv4/>
+    # misc
+    alejandra
+    php
+    cowsay
+    file
+    which
+    gnused
+    gnutar
+    gawk
+    zstd
+    gnupg
+    # nix related
+    #
+    # it provides the command `nom` works just lik>
+    # with more details log output
+    nix-output-monitor
+    # productivity
+    glow # markdown previewer in terminal
+    btop # replacement of htop/nmon
+    iotop # io monitoring
+    iftop # network monitoring
+    # system call monitoring
+    strace # system call monitoring
+    ltrace # library call monitoring
+    lsof # list open files
+        # system tools
+    inotify-tools
+    sysstat
+    ethtool
+    webp-pixbuf-loader
+    poppler
+    ffmpegthumbnailer
+    evince
+    stacer
+    digikam
+    _1password-gui
+    cpu-x
+    wireshark
+    fmt
+    telegram-desktop
+    vlc
+    nodejs_latest
+    kitty
+    kitty-img
+    kitty-themes
+    yarn2nix
+    yarn
+    moc
+    qt6.qt5compat
+    pkgs.qt6.full
+    libsForQt5.full
+    xorg.xcbutil
+    pkgs.nodePackages_latest.pnpm
+    freetype
+    fontconfig
+    gnumake
+    gcc13
+    resilio-sync
+    fmt
+    geekbench
+    rPackages.trekfont
   ];
   fonts.packages = with pkgs; [
     noto-fonts-emoji
