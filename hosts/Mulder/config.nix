@@ -169,54 +169,7 @@
         theme = "aussiegeek";
       };
     };
-    xfconf.enable = true;
-  virtualisation.docker.enable = true;
-  };
-  systemd.services.ownership = {
-    path = [pkgs.zsh];
-    serviceConfig = {
-      ExecStart = "/root/bin/ownership-update";
-      wantedBy = ["default.target"];
-      Type = "oneshot";
-      User = "root";
-    };
-  };
-  systemd.timers.ownership = {
-    timerConfig = {
-      OnBootSec = "15m";
-      OnUnitActiveSec = "15m";
-      Unit = "ownership.service";
-    };
-  };
-
-  systemd.services.backupmyconfs = {
-    path = [pkgs.zsh];
-    serviceConfig = {
-      ExecStart = "/home/dgraham/bin/check4update";
-      wantedBy = ["default.target"];
-      Type = "oneshot";
-      User = "dgraham";
-    };
-  };
-  systemd.timers.backupmyconfs = {
-    timerConfig = {
-      OnBootSec = "60m";
-      OnUnitActiveSec = "60m";
-      Unit = "backupmyconfs.service";
-    };
-  };
-  system.autoUpgrade = {
-    enable = true;
-    flake = "github:derekagraham78/nixos/flake.nix";
-    flags = [
-      "--update-input"
-      "nixpkgs"
-      "-L" # print build logs
-    ];
-    dates = "02:00";
-    randomizedDelaySec = "45min";
-  };
-
+    xfconf.enable = true;  
     hyprland.enable = true;
     xwayland.enable = true;
     firefox.enable = true;
@@ -312,11 +265,55 @@
       ];
     };
 };
+  systemd.services.ownership = {
+    path = [pkgs.zsh];
+    serviceConfig = {
+      ExecStart = "/root/bin/ownership-update";
+      wantedBy = ["default.target"];
+      Type = "oneshot";
+      User = "root";
+    };
+  };
+  systemd.timers.ownership = {
+    timerConfig = {
+      OnBootSec = "15m";
+      OnUnitActiveSec = "15m";
+      Unit = "ownership.service";
+    };
+  };
+
+  systemd.services.backupmyconfs = {
+    path = [pkgs.zsh];
+    serviceConfig = {
+      ExecStart = "/home/dgraham/bin/check4update";
+      wantedBy = ["default.target"];
+      Type = "oneshot";
+      User = "dgraham";
+    };
+  };
+  systemd.timers.backupmyconfs = {
+    timerConfig = {
+      OnBootSec = "60m";
+      OnUnitActiveSec = "60m";
+      Unit = "backupmyconfs.service";
+    };
+  };
+  system.autoUpgrade = {
+    enable = true;
+    flake = "github:derekagraham78/nixos/flake.nix";
+    flags = [
+      "--update-input"
+      "nixpkgs"
+      "-L" # print build logs
+    ];
+    dates = "02:00";
+    randomizedDelaySec = "45min";
+  };
   nixpkgs.config.allowUnfree = true;
   users = {
     mutableUsers = true;
   };
-
+  virtualisation.docker.enable = true;
   environment.systemPackages = with pkgs; [
     starship    
     wttrbar 
