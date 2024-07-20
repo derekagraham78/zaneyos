@@ -287,7 +287,7 @@
           symbol = " ";
         };
       };
-    
+    };
     dconf.enable = true;
     seahorse.enable = false;
     fuse.userAllowOther = true;
@@ -311,6 +311,7 @@
       ];
     };
   };
+};
 
   nixpkgs.config.allowUnfree = true;
 
