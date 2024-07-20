@@ -37,7 +37,7 @@
     loader.efi.canTouchEfiVariables = true;
     # Make /tmp a tmpfs
     tmp = {
-      useTmpfs = true;
+      useTmpfs = false;
       tmpfsSize = "30%";
     };
     # Appimage Support
