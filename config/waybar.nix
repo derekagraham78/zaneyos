@@ -339,6 +339,7 @@ in
     background-color: @surface0;
     transition: 0.3s;
     border-radius: 20px;
+    margin-right: 30px;
     padding: 8px;
 }
       ''
