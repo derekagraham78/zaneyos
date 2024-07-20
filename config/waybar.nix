@@ -282,7 +282,7 @@ in
             }
 
             #workspaces {
-                background: #1e1e2e;
+                background: #000000;
                 border-radius: 20px;
                 margin-left: 5px;
                 padding-right: 0px;
