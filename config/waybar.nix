@@ -200,7 +200,7 @@ in
 }
 
 #waybar {
-  background-color: #E9C7FF;
+  background-color: #AAB7B8;
   color: @text;
   margin: 3px 3px;
 }
@@ -247,7 +247,6 @@ in
 }
 #custom-hyprbindings {
   background-color: #E9C7FF;
-  padding: 5px 5px;
   }
 #custom-notification {
   background-color: #E9C7FF;
@@ -315,8 +314,6 @@ in
 
 #tray {
   background-color: #E9C7FF;
-  padding-left: 12px;
-  padding-right: 12px;
 }
 
 #custom-weather {
