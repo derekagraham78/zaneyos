@@ -329,12 +329,12 @@ in
     border-radius: 20px;
 }
 #hyprland-window {
-    background-color: ;
+    background-color: #E9C7FF;
     transition: 0.3s;
     border-radius: 20px;
 }
 #custom-startmenu {
-    background-color: black;
+    background-color: #E9C7FF;
     transition: 0.3s;
     border-radius: 20px;
     padding: 10px 30px;
