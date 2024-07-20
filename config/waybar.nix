@@ -213,7 +213,7 @@ in
 }
 
 #workspaces button {
-  color: @lavender;
+  color: #4DCAEC;
   border-radius: 1rem;
   padding: 0.4rem;
 }
@@ -320,7 +320,7 @@ in
 }
 #hyprland-window {
     background-color: #AAB7B8;
-    color: blue;
+    color: #1A5CF4;
     transition: 0.3s;
     margin-right: 60px;
     padding-right: 60px;
