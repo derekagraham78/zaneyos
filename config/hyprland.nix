@@ -152,8 +152,8 @@ ignore_opacity = off
 }
 }
 plugin {
-hyprtrails {
-}
+#hyprtrails {
+#}
 hyprbars {
   bar_height = 20
      hyprbars-button = rgb(ff4040), 10, 󰖭, hyprctl dispatch killactive

@@ -353,13 +353,14 @@ in
                 margin-left: 0px;
             }
             #custom-startmenu {
-              color: #003AFF
-              background: #000000
+              color: #003AFF;
+              background: #000000;
               padding-right: 8px;
             }
             #hyprland-window {
-              color: #003AFF
-              background: #000000
+              color: #003AFF;
+              background: #000000;
+              padding-right: 8px;
             }
       ''
       ];
