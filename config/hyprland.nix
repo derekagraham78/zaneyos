@@ -21,7 +21,7 @@ in
       xwayland.enable = true;
       systemd.enable = true;
       plugins = [
-      pkgs.hyprlandPlugins.hyprtrails
+      #pkgs.hyprlandPlugins.hyprtrails
       pkgs.hyprlandPlugins.hyprbars
       ];
       extraConfig = let
