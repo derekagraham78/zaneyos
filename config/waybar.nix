@@ -201,8 +201,8 @@ in
             }
 
             window#waybar {
-                background: rgba(21, 18, 27, 0);
-                color: #cdd6f4;
+                background: rgba(0, 58, 255, 0);
+                color: #003AFF;
             }
 
             tooltip {
