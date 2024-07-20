@@ -23,7 +23,7 @@ in
       plugins = [
        #hyprplugins.hyprtrails
        #inputs.hyprland-plugins.packages.${pkgs.system}.hyprbars
-       #hyprplugins.hyprbars
+       hyprplugins.hyprbars
       ];
       extraConfig = let
         modifier = "SUPER";

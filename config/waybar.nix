@@ -229,7 +229,6 @@ in
 
 #custom-music,
 #tray,
-#custom-notifications,
 #cpu {
   background-color: @surface0;
 }
@@ -254,6 +253,8 @@ in
   background-color: #000000;
   border-radius: 20px;
   padding-left: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
   padding-right: 10px;
   }
 #backlight,
