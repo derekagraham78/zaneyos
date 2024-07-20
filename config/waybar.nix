@@ -220,12 +220,10 @@ in
 
 #workspaces button.active {
   color: @sky;
-  border-radius: 1rem;
 }
 
 #workspaces button:hover {
   color: @sapphire;
-  border-radius: 1rem;
 }
 
 #custom-music,
