@@ -317,7 +317,7 @@ tooltip {
     border-left: 0px;
     border-right: 0px;
 }
-#custom/notification {
+#custom-notification {
     color: #f9e2af;
     background: #000000;
     border-radius: 20px 0px 0px 20px;
