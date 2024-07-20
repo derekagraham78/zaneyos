@@ -309,7 +309,24 @@ tooltip {
     transition: 0.3s;
     padding-left: 7px;
 }
-
+#cpu {
+    color: #f9e2af;
+    border-radius: 20px 0px 0px 20px;
+    border-left: 0px;
+    border-right: 0px;
+}
+#mem {
+    color: #f9e2af;
+    border-radius: 20px 0px 0px 20px;
+    border-left: 0px;
+    border-right: 0px;
+}
+#disk {
+    color: #f9e2af;
+    border-radius: 20px 0px 0px 20px;
+    border-left: 0px;
+    border-right: 0px;
+}
 #network {
     color: #f9e2af;
     border-radius: 20px 0px 0px 20px;
