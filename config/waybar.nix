@@ -252,8 +252,7 @@ in
   }
 #custom-notification {
   background-color: @surface0;
-  border-radius: 0px 1rem 1rem 0px;
-  margin-right: 1rem;
+  border-radius: 20px;
   }
 #backlight,
 #clock,
