@@ -50,7 +50,7 @@ in
             format =
               if clock24h == true
               then '' {:L%H:%M}''
-              else '' {:L%A, %B %d, %Y %I:%M:%S %p}'';
+              else '' {:L%A, %B %d, %Y %I:%M %p}'';
             tooltip = true;
             tooltip-format = "<big>{:%A, %B %d, %Y }</big>\n";
           };
@@ -272,8 +272,6 @@ in
 
 #clock {
   color: @blue;
-  border-radius: 0px 1rem 1rem 0px;
-  margin-right: 1rem;
   padding: 10px 50px;
 }
 
@@ -331,7 +329,7 @@ in
     border-radius: 20px;
 }
 #hyprland-window {
-    background-color: purple;
+    background-color: ;
     transition: 0.3s;
     border-radius: 20px;
 }
