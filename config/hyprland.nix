@@ -50,13 +50,14 @@ exec-once = killall -q swaync;sleep .5 && swaync
 exec-once = nm-applet --indicator
 exec-once = lxqt-policykit-agent
 exec-once = sleep 1.5 && swww img /home/${username}/Pictures/Wallpapers/beautifulmountainscape.jpg
+exec-once = 
 monitor=HDMI-A-3, 1920x1080, 0x0, 1
 monitor=HDMI-A-1, 1920x1080, 1920x0, 1
 xwayland {
-    force_zero_scaling = true
+    force_zero_scaling = false;
          }
 # toolkit-specific scale
-env = GDK_SCALE,1
+# env = GDK_SCALE,1
 env = XCURSOR_SIZE,32
 workspace = name:1Web,monitor:HDMI-A-3,default:true,persistant:true
 workspace = name:2Terms,monitor:HDMI-A-3,default:true,persistant:true
@@ -72,9 +73,9 @@ workspace = 9,monitor:HDMI-A-1,default:true,persistant:true
 workspace = 10,monitor:HDMI-A-1,default:true,persistant:true
 ${extraMonitorSettings}
 general {
-gaps_in = 6
+gaps_in = 2
 gaps_out = 8
-border_size = 2
+border_size = 1
 layout = dwindle
 resize_on_border = true
 col.active_border = rgb(${config.stylix.base16Scheme.base08}) rgb(${config.stylix.base16Scheme.base0C}) 45deg
@@ -114,6 +115,10 @@ windowrulev2 = workspace name:1Web, class:^(Vivaldi-stable)$
 windowrulev2 = workspace name:4Editors, class:^(Code)$
 windowrulev2 = workspace name:3Files, class:^(org.gnome.Nautilus)$
 windowrulev2 = workspace name:2Terms, class:^(kitty)$
+exec-once = discord
+exec-once = telegram-desktop
+exec-once = org.signal.Signal
+exec-once = element-desktop
 gestures {
 workspace_swipe = true
 workspace_swipe_fingers   = 3
@@ -138,15 +143,15 @@ animation = fade, 1, 10, default
 animation = workspaces, 1, 5, wind
 }
 decoration {
-rounding = 10
+rounding = 20
 drop_shadow = true
-shadow_range = 4
+shadow_range = 8
 shadow_render_power = 3
 col.shadow = rgba(1a1a1aee)
 blur {
 enabled = true
 size = 5
-passes = 3
+passes = 4
 new_optimizations = on
 ignore_opacity = off
 }

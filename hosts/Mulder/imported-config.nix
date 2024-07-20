@@ -16,7 +16,7 @@
       #  userEmail = "derekagraham78@icloud.com";
     };
     zsh = {
-      enable = true;
+      enable = false;
       # Your zsh config
       ohMyZsh = {
         enable = true;
@@ -74,7 +74,6 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    emacs
     helix
     filezilla
     imagemagick
@@ -83,7 +82,6 @@
     gparted
     whois
     docker-compose
-    eza
     deadnix
     slack
     cachix
@@ -91,10 +89,7 @@
     wev
     w3m
     deluge-gtk
-    nautilus
-    nautilus-open-any-terminal
     sushi
-    gwenview
     clipmenu
     emojipick
     wev

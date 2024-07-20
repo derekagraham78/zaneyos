@@ -38,7 +38,7 @@
     loader.efi.canTouchEfiVariables = true;
     # Make /tmp a tmpfs
     tmp = {
-      useTmpfs = false;
+      useTmpfs = true;
       tmpfsSize = "30%";
     };
     # Appimage Support
@@ -243,7 +243,7 @@
       dedicatedServer.openFirewall = true;
     };
     thunar = {
-      enable = true;
+      enable = false;
       plugins = with pkgs.xfce; [
         thunar-archive-plugin
         thunar-volman
@@ -258,18 +258,14 @@
   };
 
   environment.systemPackages = with pkgs; [
-    starship
-    #hyprlandPlugins.hyprbars
-    #hyprlandPlugins.hyprexpo
-    #hyprlandPlugins.hyprtrails
-    #hyprlandPlugins.hypr-dynamic-cursors
+    starship    
     wttrbar 
     vscode-with-extensions
     element-desktop
     vivaldi
     floorp
     vivaldi-ffmpeg-codecs
-	  aspell
+	aspell
     nanorc
     vim
     variety
@@ -374,12 +370,10 @@
     enable = true;
     wlr.enable = true;
     extraPortals = [
-      pkgs.xdg-desktop-portal-kde
       pkgs.xdg-desktop-portal-gtk
       pkgs.xdg-desktop-portal
     ];
     configPackages = [
-      pkgs.xdg-desktop-portal-kde
       pkgs.xdg-desktop-portal-gtk
       pkgs.xdg-desktop-portal-hyprland
       pkgs.xdg-desktop-portal
@@ -479,7 +473,6 @@
       enable = true;
       drivers = [
           pkgs.brlaser
-        # pkgs.hplipWithPlugin
       ];
     };
     gnome.gnome-keyring.enable = true;
@@ -596,8 +589,6 @@
   # OpenGL
   hardware.graphics = {
     enable = true;
-    #driSupport = true;
-    #driSupport32Bit = true;
   };
 
   # Open ports in the firewall.
