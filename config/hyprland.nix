@@ -166,11 +166,11 @@ pseudotile = true
 preserve_split = true
 }
 bind = ${modifier},Return,exec,${terminal}
-bind = ${modifier}SHIFT,Return,exec,rofi-launcher
-bind = ${modifier}SHIFT,W,exec,web-search
-bind = ${modifier}CONTROL,W,exec,waybar
-bind = ${modifier}ALT,W,exec,variety
-bind = ${modifier}SHIFT,N,exec,swaync-client -rs
+bind = ${modifier},SHIFT,Return,exec,rofi-launcher
+bind = ${modifier},SHIFT,W,exec,web-search
+bind = ${modifier},CONTROL,W,exec,waybar
+bind = ${modifier},ALT,W,exec,variety
+bind = ${modifier},SHIFT,N,exec,swaync-client -rs
 bind = ${modifier},W,exec,${browser}
 bind = ${modifier},V,exec, code
 bind = ${modifier},N,exec, nautilus
