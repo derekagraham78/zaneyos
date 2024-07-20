@@ -216,12 +216,14 @@ in
 
             #workspaces button {
                 padding: 5px;
-                color: #000000;
+                color: #ffffff;
+                background: #000000;
                 margin-right: 5px;
             }
 
             #workspaces button.active {
                 color: #007FF7;
+                background: #000000;
             }
 
             #workspaces button.focused {
