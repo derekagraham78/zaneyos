@@ -17,6 +17,7 @@ in
         {
           layer = "top";
           position = "top";
+          height = 10px;
           modules-center = ["hyprland/workspaces"];
           modules-left = [
             "custom/startmenu"
@@ -230,38 +231,38 @@ in
 #custom-music,
 #tray,
 #cpu {
-  background-color: #DCD9DE;
+  background-color: #AAB7B8;
   margin-right: 5px;
 }
 #memory {
-  background-color: #DCD9DE;
+  background-color: #AAB7B8;
   margin-right: 5px;
   }
 #disk {
-  background-color: #DCD9DE;
+  background-color: #AAB7B8;
   margin-right: 5px;
   }
 #network {
-  background-color: #DCD9DE;
+  background-color: #AAB7B8;
   margin-right: 5px;
   }
 #idle_inhibitor {
-  background-color: #DCD9DE;
+  background-color: #AAB7B8;
   margin-right: 5px;
 }
 #custom-hyprbindings {
-  background-color: #DCD9DE;
+  background-color: #AAB7B8;
   padding: 5px 5px;
   }
 #custom-notification {
-  background-color: #DCD9DE;
+  background-color: #AAB7B8;
   padding: 5px 30px;
   }
 #backlight,
 #clock,
 #battery,
 #pulseaudio {
-  background-color: #DCD9DE;
+  background-color: #AAB7B8;
   }
 #custom-lock,
 #custom-power {
@@ -297,7 +298,7 @@ in
 }
 
 #pulseaudio {
-  background-color: #DCD9DE;
+  background-color: #AAB7B8;
   margin-left: 50px;
 }
 
@@ -318,16 +319,16 @@ in
 }
 
 #tray {
-  background-color: #DCD9DE;
+  background-color: #AAB7B8;
   padding: 5px 5px;
 }
 
 #custom-weather {
-    background-color: #E9C7FF;
+    background-color: #AAB7B8;
     transition: 0.3s;
 }
 #hyprland-window {
-    background-color: #E9C7FF;
+    background-color: #AAB7B8;
     transition: 0.3s;
     margin-right: 60px;
     padding-right: 60px;
