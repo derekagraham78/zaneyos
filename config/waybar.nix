@@ -352,12 +352,12 @@ in
                 border-right: 0px;
                 margin-left: 0px;
             }
-            #custom/startmenu {
+            #custom-startmenu {
               color: #003AFF
               background: #000000
               padding-right: 8px;
             }
-            #hyprland/window {
+            #hyprland-window {
               color: #003AFF
               background: #000000
             }
