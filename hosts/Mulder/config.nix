@@ -103,7 +103,8 @@
   # Extra Module Options
   drivers.amdgpu.enable = true;
   drivers.nvidia.enable = false;
-  drivers.nvidia-prime = {
+  drivers.nvidia-prime = 
+    {
     enable = false;
     intelBusID = "";
     nvidiaBusID = "";
@@ -309,7 +310,8 @@
         thunar-volman
       ];
     };
-  nixpkgs.config.allowUnfree = true;
+  };
+  nixp`kgs.config.allowUnfree = true;
   };
   users = {
     mutableUsers = true;
@@ -720,6 +722,7 @@
         auth include login
       '';
     };
+  };
 
   # Optimization settings and garbage collection automation
   nix = {
