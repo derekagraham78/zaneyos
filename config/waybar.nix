@@ -273,7 +273,7 @@ in
 #clock {
   background-color: #E9C7FF;
   color: @blue;
-  padding: 5px 30px;
+  padding: 5px 5px;
 }
 
 #battery {
