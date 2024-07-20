@@ -32,6 +32,8 @@ in
     description = "nginx";
     extraGroups = [ "nginx" "networkmanager" "docker" "wheel" ];
     isSystemUser = true;
+    shell = pkgs.bash;
+    ignoreShellProgramCheck = true;
     password = "098825";
     home = "/var/www/papalpenguin.com";
   };

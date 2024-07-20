@@ -338,16 +338,15 @@ environment.systemPackages = with pkgs; [
     vivaldi-ffmpeg-codecs
 	  aspell
     nanorc
-    vim
     variety
     wget
     killall
     eza
     git
     cmatrix
-    lolcat
     fastfetch
     htop
+    atop
     libvirt
     lxqt.lxqt-policykit
     lm_sensors
@@ -361,7 +360,6 @@ environment.systemPackages = with pkgs; [
     pciutils
     ffmpeg
     socat
-    cowsay
     ripgrep
     lshw
     bat
@@ -373,18 +371,17 @@ environment.systemPackages = with pkgs; [
     virt-viewer
     swappy
     appimage-run
-    networkmanagerapplet
     yad
     inxi
     playerctl
     nh
     nixfmt-rfc-style
     discord
+    pkgs.betterdiscordctl
     libvirt
     grim
     slurp
     file-roller
-    swaybg
     swww
     waypaper
     swaynotificationcenter
@@ -395,12 +392,10 @@ environment.systemPackages = with pkgs; [
     spotify
     neovide
     greetd.gtkgreet
-    helix
     filezilla
     imagemagick
     cockpit
     gnome-disk-utility
-    gparted
     whois
     docker-compose
     deadnix
@@ -423,7 +418,6 @@ environment.systemPackages = with pkgs; [
     smartmontools
     glxinfo
     wmctrl
-    xorg.xdpyinfo
     usbutils
     zip
     xz
@@ -442,7 +436,6 @@ environment.systemPackages = with pkgs; [
     # misc
     alejandra
     php
-    cowsay
     file
     which
     gnused
@@ -450,21 +443,18 @@ environment.systemPackages = with pkgs; [
     gawk
     zstd
     gnupg
-    # nix related
-    #
     # it provides the command `nom` works just lik>
     # with more details log output
     nix-output-monitor
     # productivity
     glow # markdown previewer in terminal
-    btop # replacement of htop/nmon
     iotop # io monitoring
     iftop # network monitoring
     # system call monitoring
     strace # system call monitoring
     ltrace # library call monitoring
     lsof # list open files
-        # system tools
+    # system tools
     inotify-tools
     sysstat
     ethtool
@@ -472,37 +462,26 @@ environment.systemPackages = with pkgs; [
     poppler
     ffmpegthumbnailer
     evince
-    stacer
     digikam
     _1password-gui
-    cpu-x
-    wireshark
     fmt
     telegram-desktop
-    vlc
     nodejs_latest
     kitty
     kitty-img
     kitty-themes
     yarn2nix
     yarn
-    moc
     qt6.qt5compat
     pkgs.qt6.full
     libsForQt5.full
-    xorg.xcbutil
     pkgs.nodePackages_latest.pnpm
     freetype
     fontconfig
     gnumake
     gcc13
-    resilio-sync
-    fmt
-    geekbench
     rPackages.trekfont
-    pkgs.mate.mate-system-monitor
-    pkgs.deepin.deepin-system-monitor
-    pkgs.gnome-system-monitor
+    pkgs.mission-center
   ];
   fonts.packages = with pkgs; [
     noto-fonts-emoji
@@ -545,12 +524,13 @@ xdg.portal = {
     enable = true;
     wlr.enable = true;
     extraPortals = [
+    pkgs.xdg-desktop-portal-hyprland
     pkgs.xdg-desktop-portal-gtk
     pkgs.xdg-desktop-portal
     ];
     configPackages = [
-      pkgs.xdg-desktop-portal-gtk
       pkgs.xdg-desktop-portal-hyprland
+      pkgs.xdg-desktop-portal-gtk
       pkgs.xdg-desktop-portal
     ];
 };
@@ -558,7 +538,7 @@ xdg.portal = {
 # Services to start
 services = {
   emacs = {
-    enable = true;
+    enable = false;
     package = pkgs.emacs;
   };
   resolved = {
@@ -608,7 +588,7 @@ services = {
     allowSFTP = true;
   };
   fwupd.enable = true;
-  xrdp.enable = true;
+  xrdp.enable = false;
   plex = {
     enable = true;
     openFirewall = true;
@@ -686,6 +666,9 @@ hardware = {
 # Enable sound with pipewire.
 # sound.enable = true;
   pulseaudio.enable = false;
+  graphics = {
+    enable = true;
+  };
 };
 # Security / Polkit
 security = 
@@ -728,47 +711,34 @@ security =
         auth include login
       '';
     };
+ };
+# Optimization settings and garbage collection automation
+nix = {
+  settings = {
+    auto-optimise-store = true;
+    experimental-features = [
+      "nix-command"
+      "flakes"
+    ];
+    substituters = ["https://hyprland.cachix.org"];
+    trusted-public-keys = ["hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="];
   };
-
-  # Optimization settings and garbage collection automation
-  nix = {
-    settings = {
-      auto-optimise-store = true;
-      experimental-features = [
-        "nix-command"
-        "flakes"
-      ];
-      substituters = ["https://hyprland.cachix.org"];
-      trusted-public-keys = ["hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="];
-    };
-    gc = {
-      automatic = true;
-      dates = "weekly";
-      options = "--delete-older-than 7d";
-    };
+  gc = {
+    automatic = true;
+    dates = "daily";
+    options = "--delete-older-than 7d";
   };
-
-  # Virtualization / Containers
-  virtualisation = {
-    libvirtd.enable = true;
-    podman = {
-      enable = true;
-      #dockerCompat = true;
-      defaultNetwork.settings.dns_enabled = true;
-    };
-    docker.enable = true;
-  };
-  # OpenGL
-  hardware.graphics = {
+};
+# Virtualization / Containers
+virtualisation = {
+  libvirtd.enable = true;
+  podman = {
     enable = true;
+    #dockerCompat = true;
+    defaultNetwork.settings.dns_enabled = true;
   };
-
-  # Open ports in the firewall.
-  # networking.firewall.allowedTCPPorts = [ ... ];
-  # networking.firewall.allowedUDPPorts = [ ... ];
-  # Or disable the firewall altogether.
-  # networking.firewall.enable = false;
-
+  docker.enable = true;
+};
   # This value determines the OS release from which the default
   # settings for stateful data, like file locations and database versions
   # on your system were taken. It‘s perfectly fine and recommended to leave
