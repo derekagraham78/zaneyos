@@ -298,7 +298,7 @@ in
 
 #pulseaudio {
   background-color: #E9C7FF;
-  margin-left: 10px;
+  margin-left: 50px;
 }
 
 #custom-music {
@@ -325,7 +325,6 @@ in
 #custom-weather {
     background-color: #E9C7FF;
     transition: 0.3s;
-    padding: 8px 8px;
 }
 #hyprland-window {
     background-color: #E9C7FF;
