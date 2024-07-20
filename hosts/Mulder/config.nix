@@ -259,7 +259,7 @@
 
   environment.systemPackages = with pkgs; [
     starship
-    hyprlandPlugins.hyprbars
+    #hyprlandPlugins.hyprbars
     #hyprlandPlugins.hyprexpo
     #hyprlandPlugins.hyprtrails
     #hyprlandPlugins.hypr-dynamic-cursors
