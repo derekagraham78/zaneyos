@@ -355,6 +355,7 @@ in
             #custom/startmenu {
               color: #003AFF
               background: #000000
+              padding-right: 8px;
             }
             #hyprland/window {
               color: #003AFF
