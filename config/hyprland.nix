@@ -63,7 +63,7 @@ workspace = name:2Terms,monitor:HDMI-A-3,default:true,persistant:true
 workspace = name:3Files,monitor:HDMI-A-3,default:true,persistant:true
 workspace = name:4Editors,monitor:HDMI-A-3,default:true,persistant:true
 workspace = 5,monitor:HDMI-A-3,default:true,persistant:true
-workspace = name:Desktop,monitor:*,default:true,persistant:true
+workspace = name:Desktop,monitor:all,default:true,persistant:true
 
 workspace = name:6Chat,monitor:HDMI-A-1,default:true,persistant:true
 workspace = name:7Misc,monitor:HDMI-A-1,default:true,persistant:true
