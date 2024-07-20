@@ -199,13 +199,11 @@ in
   font-weight: bold;
   min-height: 0;
 }
-
 #waybar {
   background-color: #E9C7FF;
   color: @text;
   margin: 3px 3px;
 }
-
 #workspaces {
   border-radius: 1rem;
   margin: 5px;
@@ -213,23 +211,18 @@ in
   color: #ffffff;
   margin-left: 1rem;
 }
-
 #workspaces button {
   color: #000000;
   border-radius: 1rem;
   padding: 0.4rem;
 }
-
 #workspaces button.active {
   color: #ffffff;
   background-color: #BD0BAA; 
 }
-
 #workspaces button:hover {
   color: #00FF0C;
 }
-
-#custom-music,
 #tray,
 #cpu {
   background-color: #E9C7FF;
@@ -252,70 +245,22 @@ in
 #custom-notification {
   background-color: #E9C7FF;
   }
-#backlight,
 #clock,
-#battery,
 #pulseaudio {
   background-color: #E9C7FF;
   }
-#custom-lock,
-#custom-power {
-  background-color: #E9C7FF;
-  padding: 0.5rem 1rem;
-  margin: 5px;
-}
-
 #clock {
   background-color: #E9C7FF;
   color: @blue;
-  margin-left: 15px;
+  margin-left: 5px;
 }
-
-#battery {
-  color: @green;
-}
-
-#battery.charging {
-  color: @green;
-}
-
-#battery.warning:not(.charging) {
-  color: @red;
-}
-
-#backlight {
-  color: @yellow;
-}
-
-#backlight, #battery {
-    border-radius: 0;
-}
-
 #pulseaudio {
   background-color: #E9C7FF;
   margin-left: 50px;
 }
-
-#custom-music {
-  color: @mauve;
-  border-radius: 1rem;
-}
-
-#custom-lock {
-    border-radius: 1rem 0px 0px 1rem;
-    color: @lavender;
-}
-
-#custom-power {
-    margin-right: 1rem;
-    border-radius: 0px 1rem 1rem 0px;
-    color: @red;
-}
-
 #tray {
   background-color: #E9C7FF;
 }
-
 #custom-weather {
     background-color: #E9C7FF;
     transition: 0.3s;
