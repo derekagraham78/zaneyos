@@ -101,15 +101,17 @@
     };
   };
   # Extra Module Options
-  drivers.amdgpu.enable = true;
-  drivers.nvidia.enable = false;
-  drivers.nvidia-prime = 
+  drivers = {
+    amdgpu.enable = true;
+    nvidia.enable = false;
+    nvidia-prime = 
     {
-    enable = false;
-    intelBusID = "";
-    nvidiaBusID = "";
+      enable = false;
+      intelBusID = "";
+      nvidiaBusID = "";
+    };
+    intel.enable = true;
   };
-  drivers.intel.enable = true;
   vm.guest-services.enable = true;
   local.hardware-clock.enable = false;
   networking = {
@@ -265,40 +267,53 @@
       ];
     };
 };
-  systemd.services.ownership = {
-    path = [pkgs.zsh];
-    serviceConfig = {
-      ExecStart = "/root/bin/ownership-update";
-      wantedBy = ["default.target"];
-      Type = "oneshot";
-      User = "root";
+systemd = {  
+  services = {
+    ownership = {
+      path = [pkgs.zsh];
+      serviceConfig = {
+        ExecStart = "/root/bin/ownership-update";
+        wantedBy = ["default.target"];
+        Type = "oneshot";
+        User = "root";
+      };
+    };
+    backupmyconfs = {
+      path = [pkgs.zsh];
+      serviceConfig = {
+        ExecStart = "/home/dgraham/bin/check4update";
+        wantedBy = ["default.target"];
+        Type = "oneshot";
+        User = "dgraham";
+      };
+    };
+    flatpak-repo = {
+    path = [pkgs.flatpak];
+    script = ''
+      flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+    '';
     };
   };
-  systemd.timers.ownership = {
-    timerConfig = {
-      OnBootSec = "15m";
-      OnUnitActiveSec = "15m";
-      Unit = "ownership.service";
+  
+  timers = {
+    ownership = {
+      timerConfig = {
+        OnBootSec = "15m";
+        OnUnitActiveSec = "15m";
+        Unit = "ownership.service";
+      };
+    };
+    backupmyconfs = {
+      timerConfig = {
+        OnBootSec = "60m";
+        OnUnitActiveSec = "60m";
+        Unit = "backupmyconfs.service";
+      };
     };
   };
-
-  systemd.services.backupmyconfs = {
-    path = [pkgs.zsh];
-    serviceConfig = {
-      ExecStart = "/home/dgraham/bin/check4update";
-      wantedBy = ["default.target"];
-      Type = "oneshot";
-      User = "dgraham";
-    };
-  };
-  systemd.timers.backupmyconfs = {
-    timerConfig = {
-      OnBootSec = "60m";
-      OnUnitActiveSec = "60m";
-      Unit = "backupmyconfs.service";
-    };
-  };
-  system.autoUpgrade = {
+  
+system = {
+  autoUpgrade = {
     enable = true;
     flake = "github:derekagraham78/nixos/flake.nix";
     flags = [
@@ -309,12 +324,12 @@
     dates = "02:00";
     randomizedDelaySec = "45min";
   };
-  nixpkgs.config.allowUnfree = true;
-  users = {
+};
+nixpkgs.config.allowUnfree = true;
+users = {
     mutableUsers = true;
-  };
-  virtualisation.docker.enable = true;
-  environment.systemPackages = with pkgs; [
+};
+environment.systemPackages = with pkgs; [
     starship    
     wttrbar 
     vscode-with-extensions
@@ -519,60 +534,57 @@
     ];
     keyMap = "us";
   };
-  environment.sessionVariables =
-  { WLR_NO_HARDWARE_CURSORS = "1"; 
-  };
   environment.variables = {
     ZANEYOS_VERSION = "2.2";
     ZANEYOS = "true";
   };
-  # Extra Portal Configuration
-  xdg.portal = {
+# Extra Portal Configuration
+xdg.portal = {
     enable = true;
     wlr.enable = true;
     extraPortals = [
-      pkgs.xdg-desktop-portal-gtk
-      pkgs.xdg-desktop-portal
+    pkgs.xdg-desktop-portal-gtk
+    pkgs.xdg-desktop-portal
     ];
     configPackages = [
       pkgs.xdg-desktop-portal-gtk
       pkgs.xdg-desktop-portal-hyprland
       pkgs.xdg-desktop-portal
     ];
-  };
+};
 
-  # Services to start
-  services = {
-      emacs = {
-        enable = true;
-        package = pkgs.emacs;
-      };
-      resolved = {
-        enable = true;
-        dnssec = "true";
-        domains = ["~."];
-        fallbackDns = ["1.1.1.1#one.one.one.one" "1.0.0.1#one.one.one.one"];
-        dnsovertls = "true";
-      };
-      tailscale = {
-       enable = true;
-      };
-      vsftpd = {
-        enable = true;
-        writeEnable = true;
-        localUsers = true;
-        userlist = ["dgraham" "root" "nginx"];
-        userlistEnable = true;
-        virtualUseLocalPrivs = true;
-      };
-    memcached.enable = true;
+# Services to start
+services = {
+  emacs = {
+    enable = true;
+    package = pkgs.emacs;
+  };
+  resolved = {
+    enable = true;
+    dnssec = "true";
+    domains = ["~."];
+    fallbackDns = ["1.1.1.1#one.one.one.one" "1.0.0.1#one.one.one.one"];
+    dnsovertls = "true";
+  };
+  tailscale = {
+    enable = true;
+  };
+  vsftpd = {
+    enable = true;
+    writeEnable = true;
+    localUsers = true;
+    userlist = ["dgraham" "root" "nginx"];
+    userlistEnable = true;
+    virtualUseLocalPrivs = true;
+  };
+  memcached.enable = true;
     avahi = {
       enable = true;
       nssmdns4 = true;
       openFirewall = true;
     };
-    certmgr.renewInterval = "30m";
-    cockpit = {
+  certmgr.renewInterval = "30m";
+  cockpit = {
       enable = true;
       port = 9090;
       settings = {
@@ -583,103 +595,98 @@
           AllowUnencrypted = true;
         };
       };
-    };
-    openssh = {
-      enable = true;
-      openFirewall = false;
-      settings = {
-        PermitRootLogin = "yes";
-        AllowGroups = ["wheel" "root"];
-      };
-      allowSFTP = true;
-    };
-    fwupd.enable = true;
-    xrdp.enable = true;
-    plex = {
-      enable = true;
-      openFirewall = true;
-    };
-    xserver = {
-      enable = false;
-      xkb = {
-        layout = "us";
-        variant = "";
-      };
-    };
-    greetd = {
-      enable = true;
-      vt = 12;
-      settings = rec {
-        initial_session = { command = "Hyprland"; user = "dgraham"; };
-        default_session = initial_session;
-          #{
-          # Wayland Desktop Manager is installed only for user ryan via home-manager!
-          # user = "dgraham";
-          # .wayland-session is a script generated by home-manager, which links to the current wayland compositor(sway/hyprland or others).
-          # with such a vendor-no-locking script, we can switch to another wayland compositor without modifying greetd's config here.
-          # command = "$HOME/.wayland-session"; # start a wayland session directly without a login manager
-          # command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --cmd Hyprland"; # start Hyprland with a TUI login manager
-          #};
-      };
-    };
-    smartd = {
-      enable = false;
-      autodetect = true;
-    };
-    libinput.enable = true;
-    fstrim.enable = true;
-    gvfs.enable = true;
-    flatpak.enable = true;
-    printing = {
-      enable = true;
-      drivers = [
-          pkgs.brlaser
-      ];
-    };
-    gnome.gnome-keyring.enable = true;
-    ipp-usb.enable = true;
-    syncthing = {
-      enable = false;
-      user = "${username}";
-      dataDir = "/home/${username}";
-      configDir = "/home/${username}/.config/syncthing";
-    };
-    pipewire = {
-      enable = true;
-      alsa.enable = true;
-      alsa.support32Bit = true;
-      pulse.enable = true;
-    };
-    rpcbind.enable = false;
-    nfs.server.enable = false;
   };
-  systemd.services.flatpak-repo = {
-    path = [pkgs.flatpak];
-    script = ''
-      flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-    '';
+  openssh = {
+    enable = true;
+    openFirewall = false;
+    settings = {
+      PermitRootLogin = "yes";
+      AllowGroups = ["wheel" "root"];
+    };
+    allowSFTP = true;
   };
-  hardware.sane = {
+  fwupd.enable = true;
+  xrdp.enable = true;
+  plex = {
+    enable = true;
+    openFirewall = true;
+  };
+  xserver = {
+    enable = false;
+    xkb = {
+      layout = "us";
+      variant = "";
+    };
+  };
+  greetd = {
+    enable = true;
+    vt = 12;
+    settings = rec {
+      initial_session = { command = "Hyprland"; user = "dgraham"; };
+      default_session = initial_session;
+      #{
+      # Wayland Desktop Manager is installed only for user ryan via home-manager!
+      # user = "dgraham";
+      # .wayland-session is a script generated by home-manager, which links to the current wayland compositor(sway/hyprland or others).
+      # with such a vendor-no-locking script, we can switch to another wayland compositor without modifying greetd's config here.
+      # command = "$HOME/.wayland-session"; # start a wayland session directly without a login manager
+      # command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --cmd Hyprland"; # start Hyprland with a TUI login manager
+      #};
+    };
+  };
+  smartd = {
+    enable = false;
+    autodetect = true;
+  };
+  libinput.enable = true;
+  fstrim.enable = true;
+  gvfs.enable = true;
+  flatpak.enable = true;
+  printing = {
+    enable = true;
+    drivers = [
+    pkgs.brlaser
+    ];
+  };
+  gnome.gnome-keyring.enable = true;
+  ipp-usb.enable = true;
+  syncthing = {
+    enable = false;
+    user = "${username}";
+    dataDir = "/home/${username}";
+    configDir = "/home/${username}/.config/syncthing";
+  };
+  pipewire = {
+    enable = true;
+    alsa.enable = true;
+    alsa.support32Bit = true;
+    pulse.enable = true;
+  };
+  rpcbind.enable = false;
+  nfs.server.enable = false;
+};
+hardware = {
+  sane = {
     enable = true;
     extraBackends = [pkgs.sane-airscan];
     disabledDefaultBackends = ["escl"];
   };
-
-  # Extra Logitech Support
-  hardware.logitech.wireless.enable = true;
-  hardware.logitech.wireless.enableGraphical = true;
-
-  # Bluetooth Support
-  hardware.bluetooth.enable = true;
-  hardware.bluetooth.powerOnBoot = true;
-  services.blueman.enable = true;
-
-  # Enable sound with pipewire.
- # sound.enable = true;
-  hardware.pulseaudio.enable = false;
-
-  # Security / Polkit
-  security = 
+# Extra Logitech Support
+  logitech.wireless = { 
+    enable = true;
+    enableGraphical = true;
+  };
+# Bluetooth Support
+  bluetooth = {
+    enable = true;
+    powerOnBoot = true;
+  };
+# Enable sound with pipewire.
+# sound.enable = true;
+  pulseaudio.enable = false;
+};
+# Security / Polkit
+security = 
   {
     doas = {
       enable = true;
@@ -740,13 +747,15 @@
   };
 
   # Virtualization / Containers
-  virtualisation.libvirtd.enable = true;
-  virtualisation.podman = {
-    enable = true;
-    #dockerCompat = true;
-    defaultNetwork.settings.dns_enabled = true;
+  virtualisation = {
+    libvirtd.enable = true;
+    podman = {
+      enable = true;
+      #dockerCompat = true;
+      defaultNetwork.settings.dns_enabled = true;
+    };
+    docker.enable = true;
   };
-
   # OpenGL
   hardware.graphics = {
     enable = true;
@@ -758,7 +767,7 @@
   # Or disable the firewall altogether.
   # networking.firewall.enable = false;
 
-  # This value determines the NixOS release from which the default
+  # This value determines the OS release from which the default
   # settings for stateful data, like file locations and database versions
   # on your system were taken. It‘s perfectly fine and recommended to leave
   # this value at the release version of the first install of this system.
