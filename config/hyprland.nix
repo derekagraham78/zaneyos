@@ -144,7 +144,7 @@ animation = fade, 1, 10, default
 animation = workspaces, 1, 5, wind
 }
 decoration {
-rounding = 70
+rounding = 30
 drop_shadow = true
 shadow_range = 8
 inactive_opacity = 0.4
