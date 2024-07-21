@@ -145,7 +145,7 @@ animation = fade, 1, 10, default
 animation = workspaces, 1, 5, wind
 }
 decoration {
-rounding = 80
+rounding = 70
 drop_shadow = true
 shadow_range = 8
 inactive_opacity = 0.4
@@ -167,13 +167,13 @@ hyprtrails {
 hyprbars {
         # example config
         bar_height = 20
+        bar_buttons_alignment = center
         bar_color = rgb(58D68D)
         # example buttons (R -> L)
         # hyprbars-button = color, size, on-click
         hyprbars-button = rgb(ff4040), 10, 󰖭, hyprctl dispatch killactive
         hyprbars-button = rgb(eeee11), 10, , hyprctl dispatch fullscreen 1
-        hyprbars-buttob = rgb(ffffff), 10, ▼, workspace
-    }
+        }
 }
 dwindle {
 pseudotile = true
