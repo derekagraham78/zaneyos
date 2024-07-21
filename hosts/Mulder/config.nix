@@ -333,7 +333,7 @@ environment.systemPackages = with pkgs; [
     wttrbar 
     vscode-with-extensions
     element-desktop
-    #vivaldi
+    vivaldi
     floorp
     vivaldi-ffmpeg-codecs
 	  aspell
