@@ -482,6 +482,8 @@ environment.systemPackages = with pkgs; [
     gcc13
     rPackages.trekfont
     pkgs.gnome-system-monitor
+    pkgs.gnome.nautilus
+    pkgs.gnome.sushi
   ];
   fonts.packages = with pkgs; [
     noto-fonts-emoji
