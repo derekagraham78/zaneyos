@@ -426,6 +426,9 @@ environment.systemPackages = with pkgs; [
     jq # A lightweight and flexible command-li>
     # networking tools
     networkmanager
+    networkmanager-openvpn
+    networkmanager_dmenu
+    networkmanagerapplet
     mtr # A network diagnostic tool
     iperf3
     dnsutils # `dig` + `nslookup`
