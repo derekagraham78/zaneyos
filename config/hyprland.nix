@@ -149,7 +149,7 @@ rounding = 70
 drop_shadow = true
 shadow_range = 8
 inactive_opacity = 0.4
-active_opacity = 0.8
+active_opacity = 0.77
 fullscreen_opacity = 1.0
 shadow_render_power = 3
 col.shadow = rgba(1a1a1aee)
@@ -171,8 +171,8 @@ hyprbars {
         bar_color = rgb(58D68D)
         # example buttons (R -> L)
         # hyprbars-button = color, size, on-click
-        hyprbars-button = rgb(ff4040), 10, 󰖭, hyprctl dispatch killactive
-        hyprbars-button = rgb(eeee11), 10, , hyprctl dispatch fullscreen 1
+        hyprbars-button = rgb(E9C7FF), 10, 󰖭, hyprctl dispatch killactive
+        hyprbars-button = rgb(BD0BAA), 10, , hyprctl dispatch fullscreen 1
         }
 }
 dwindle {
