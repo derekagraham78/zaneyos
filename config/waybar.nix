@@ -249,6 +249,7 @@ in
   }
 #custom-notification {
   background-color: #E9C7FF;
+  padding-left: 10px;
   }
 #clock,
 #pulseaudio {
@@ -266,7 +267,8 @@ in
 }
 #tray {
   background-color: #E9C7FF;
-  padding-right: 5px;
+  padding-right: 10px;
+  padding-left: 10px;
 }
 #custom-weather {
     background-color: #E9C7FF;
