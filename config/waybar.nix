@@ -226,18 +226,23 @@ in
 #tray,
 #cpu {
   background-color: #E9C7FF;
+  padding-right: 30px;
 }
 #memory {
   background-color: #E9C7FF;
+  padding-right: 30px;
   }
 #disk {
   background-color: #E9C7FF;
+  padding-right: 30px;
   }
 #network {
   background-color: #E9C7FF;
+  padding-right: 30px;
   }
 #idle_inhibitor {
   background-color: #E9C7FF;
+    padding-left: 30px;
 }
 #custom-hyprbindings {
   background-color: #E9C7FF;
@@ -257,13 +262,16 @@ in
 #pulseaudio {
   background-color: #E9C7FF;
   margin-left: 50px;
+  padding-right: 30px;
 }
 #tray {
   background-color: #E9C7FF;
+  padding-right: 30px;
 }
 #custom-weather {
     background-color: #E9C7FF;
     transition: 0.3s;
+    padding-right: 30px;
 }
 #hyprland-window {
     background-color: #AAB7B8;
