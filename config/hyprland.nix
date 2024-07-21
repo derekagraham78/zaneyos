@@ -189,7 +189,6 @@ bind = ${modifier},W,exec,${browser}
 bind = ${modifier},V,exec, code
 bind = ${modifier},N,exec, nautilus
 bind = ${modifier},E,exec,emopicker9000
-bind = ${modifier},S,exec,flameshot
 bind = ${modifier},D,exec,discord
 bind = ${modifier},O,exec,obs
 bind = ${modifier},C,exec,hyprpicker -a
