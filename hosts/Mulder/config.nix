@@ -334,6 +334,7 @@ environment.systemPackages = with pkgs; [
     vscode-with-extensions
     element-desktop
     vivaldi
+    pkgs.hypridle
     floorp
     vivaldi-ffmpeg-codecs
 	  aspell
