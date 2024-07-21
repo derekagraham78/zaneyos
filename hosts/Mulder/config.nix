@@ -273,7 +273,6 @@ systemd = {
       path = [pkgs.zsh];
       serviceConfig = {
         ExecStart = "/root/bin/ownership-update";
-        wantedBy = ["default.target"];
         Type = "oneshot";
         User = "root";
       };
@@ -282,7 +281,6 @@ systemd = {
       path = [pkgs.zsh];
       serviceConfig = {
         ExecStart = "/home/dgraham/bin/check4update";
-        wantedBy = ["default.target"];
         Type = "oneshot";
         User = "dgraham";
       };
