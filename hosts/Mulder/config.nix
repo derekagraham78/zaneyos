@@ -484,6 +484,7 @@ environment.systemPackages = with pkgs; [
     pkgs.gnome-system-monitor
     pkgs.gnome.nautilus
     pkgs.gnome.sushi
+    pkgs.satty
   ];
   fonts.packages = with pkgs; [
     noto-fonts-emoji
