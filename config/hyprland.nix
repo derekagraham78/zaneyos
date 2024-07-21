@@ -120,6 +120,7 @@ exec-once = discord
 exec-once = telegram-desktop
 exec-once = org.signal.Signal
 exec-once = element-desktop
+exec-once = gnome-system-monitor
 gestures {
 workspace_swipe = true
 workspace_swipe_fingers   = 3
