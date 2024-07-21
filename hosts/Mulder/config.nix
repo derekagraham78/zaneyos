@@ -329,7 +329,8 @@ users = {
     mutableUsers = true;
 };
 environment.systemPackages = with pkgs; [
-    starship    
+    starship
+    hyprlock    
     wttrbar 
     vscode-with-extensions
     element-desktop
