@@ -463,7 +463,8 @@ environment.systemPackages = with pkgs; [
     ffmpegthumbnailer
     evince
     digikam
-    _1password-gui
+    _1password-gui-beta
+    _1password
     fmt
     telegram-desktop
     nodejs_latest
