@@ -145,9 +145,10 @@ animation = fade, 1, 10, default
 animation = workspaces, 1, 5, wind
 }
 decoration {
-rounding = 20
+rounding = 50
 drop_shadow = true
 shadow_range = 8
+inactive_opacity = 0.2
 shadow_render_power = 3
 col.shadow = rgba(1a1a1aee)
 blur {
