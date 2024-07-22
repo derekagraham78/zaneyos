@@ -11,10 +11,10 @@
       flake = false;
     };
     # This is required for plugin support.
-    hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
-    hyprland-plugins = {
-      url = "github:hyprwm/hyprland-plugins";
-      inputs.hyprland.follows = "hyprland";
+    #hyprland.url = "git+https://github.com/hyprwm/Hyprland?submodules=1";
+    #hyprland-plugins = {
+    #  url = "github:hyprwm/hyprland-plugins";
+      #inputs.hyprland.follows = "hyprland";
     };
   };
 
@@ -38,7 +38,7 @@
         modules = [
           ./hosts/${host}/config.nix
           inputs.stylix.nixosModules.stylix
-          inputs.hyprland.nixosModules.default
+          #inputs.hyprland.nixosModules.default
           home-manager.nixosModules.home-manager
           {
             home-manager.extraSpecialArgs = {
@@ -48,7 +48,7 @@
             };
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-            home-manager.backupFileExtension = "backup1";
+            home-manager.backupFileExtension = "backup";
             home-manager.users.${username} = import ./hosts/${host}/home.nix;
           }
         ];
