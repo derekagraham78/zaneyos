@@ -327,13 +327,14 @@ users = {
     mutableUsers = true;
 };
 environment.systemPackages = with pkgs; [
-    starship
-    hyprlock    
+    pkgs.swaylock
+    pkgs.swaylock-effects
+    pkgs.swayidle
+    starship    
     wttrbar 
     vscode-with-extensions
     element-desktop
     vivaldi
-    pkgs.hypridle
     floorp
     vivaldi-ffmpeg-codecs
 	  aspell
