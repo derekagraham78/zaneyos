@@ -327,7 +327,7 @@ users = {
     mutableUsers = true;
 };
 environment.systemPackages = with pkgs; [
-    pkgs.swaylock
+    #pkgs.swaylock
     pkgs.sway
     pkgs.swaylock-effects
     pkgs.swayidle
