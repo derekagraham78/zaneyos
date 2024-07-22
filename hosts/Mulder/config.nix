@@ -328,6 +328,7 @@ users = {
 };
 environment.systemPackages = with pkgs; [
     pkgs.swaylock
+    pkgs.sway
     pkgs.swaylock-effects
     pkgs.swayidle
     starship    
