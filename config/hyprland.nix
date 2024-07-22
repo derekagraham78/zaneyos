@@ -115,8 +115,8 @@ windowrulev2 = workspace name:3-Files, class:^(org.gnome.Nautilus)$
 windowrulev2 = workspace name:2-Terms, class:^(kitty)$
 windowrulev2 = float,class:^(org.gnome.SystemMonitor)$
 exec-once = org.signal.Signal
-exec-once = discord
 exec-once = telegram-desktop
+exec-once = discord
 exec-once = element-desktop
 exec-once = gnome-system-monitor
 gestures {
