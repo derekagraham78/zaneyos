@@ -201,7 +201,7 @@ in
 }
 #waybar {
   background-color: #33cc33;
-  color: @text;
+  color: #003300;
   margin: 3px 3px;
 }
 #workspaces {
@@ -257,7 +257,7 @@ in
   }
 #clock {
   background-color: #33cc33;
-  color: @blue;
+  color: #003300;
   margin-left: 5px;
 }
 #pulseaudio {
@@ -277,7 +277,7 @@ in
 }
 #hyprland-window {
     background-color: #33cc33;
-    color: #1A5CF4;
+    color: #003300;
     transition: 0.3s;
     margin-right: 60px;
     padding-right: 60px;
