@@ -55,8 +55,8 @@ in
             exec-once = nm-applet --indicator
             exec-once = lxqt-policykit-agent
             # Minitor Setup
-            monitor=HDMI-A-3, 1920x1080, 0x0, 1
-            monitor=HDMI-A-1, 1920x1080, 1920x0, 1
+            monitor=HDMI-A-3, 1920x1080, auto-right, 1
+            monitor=HDMI-A-1, 1920x1080, auto-left, 1
             #xwayland {
             #    force_zero_scaling = false;
             #         }
@@ -158,7 +158,7 @@ in
             # Misc
             misc {
               initial_workspace_tracking = 0
-              vrr = 1
+              vrr = 0
               mouse_move_enables_dpms = true
               key_press_enables_dpms = false
             }
