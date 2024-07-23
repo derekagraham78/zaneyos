@@ -212,13 +212,12 @@ in
                     #gesture_positive = true # positive = swipe down. Negative = swipe up.
                 }
                 hyprbars {
-                    bar_height = 20
-                    bar_buttons_alignment  = "center"
+                    bar_height = 25
                     bar_color = rgb(003300)
                     col.text = rgb(002aff)
                     bar_text_font = Star Cine
-                    bar_text_size = 12
-                    bar_part_of_window = true
+                    bar_text_size = 16
+                    bar_part_of_window = false
                     # example buttons (R -> L)
                     # hyprbars-button = color, size, on-click
                     #hyprbars-button = rgb(E9C7FF), 10, 󰖭, hyprctl dispatch killactive
