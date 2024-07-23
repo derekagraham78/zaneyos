@@ -190,9 +190,9 @@ ignore_opacity = off
 }
 # Plugins
 plugin {
-    hyprtrails {
-        color = rgba(ffaa00ff)
-    }
+    #hyprtrails {
+    #    color = rgba(ffaa00ff)
+    #}
     hyprexpo {
         columns = 3
         gap_size = 5
@@ -205,7 +205,6 @@ plugin {
         #gesture_positive = true # positive = swipe down. Negative = swipe up.
     }
     hyprbars {
-        # example config
         bar_height = 20
         bar_buttons_alignment  = "center"
         bar_color = rgb(003300)
