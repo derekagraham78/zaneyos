@@ -200,7 +200,7 @@ in
   min-height: 0;
 }
 #waybar {
-  background-color: #E9C7FF;
+  background-color: #33cc33;
   color: @text;
   margin: 3px 3px;
 }
