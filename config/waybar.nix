@@ -78,16 +78,8 @@ in
             format = " {free}";
             tooltip = true;
             path = "/";
-          };
-          "disk" = {
-            format = " {free}";
-            tooltip = true;
-            path = "/var/plex/movies2";
-          };
-          "disk" = {
-            format = " {free}";
-            tooltip = true;
             path = "/boot";
+            path = "/var/plex/movies2";
           };
           "network" = {
             format-icons = [
