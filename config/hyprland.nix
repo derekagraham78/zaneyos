@@ -174,7 +174,7 @@ in
             drop_shadow = true
             shadow_range = 8
             inactive_opacity = 0.4
-            active_opacity = 0.85
+            active_opacity = 1.0
             fullscreen_opacity = 1.0
             shadow_render_power = 3
             col.shadow = rgba(1a1a1aee)
