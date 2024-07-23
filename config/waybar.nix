@@ -44,9 +44,9 @@ in
           "hyprland/workspaces" = {
             format = "{name}";
             format-icons = {
-              default = " ";
-              active = " ";
-              urgent = " ";
+              default = "Δ ";
+              active = "α ";
+              urgent = "Ω ";
             };
             on-scroll-up = "hyprctl dispatch workspace e+1";
             on-scroll-down = "hyprctl dispatch workspace e-1";
@@ -97,7 +97,7 @@ in
             format-ethernet = "↓ {bandwidthDownBits} ↑ {bandwidthUpBits}";
             format-wifi = "{icon} {signalStrength}%";
             format-disconnected = "󰤮";
-            tooltip = false;
+            tooltip = true;
           };
           "tray" = {
             spacing = 12;
@@ -137,7 +137,7 @@ in
           };
           "custom/hyprbindings" = {
             tooltip = false;
-            format = "󱕴";
+            format = "♠";
             on-click = "sleep 0.1 && list-hypr-bindings";
           };
           "idle_inhibitor" = {
