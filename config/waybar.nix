@@ -268,7 +268,7 @@ in
             }
           #clock {
             background-color: #003300;
-            color: #00ff00;
+            color: #002aff;
             margin-left: 5px;
           }
           #pulseaudio {

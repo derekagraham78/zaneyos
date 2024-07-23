@@ -216,6 +216,8 @@ in
                     bar_buttons_alignment  = "center"
                     bar_color = rgb(003300)
                     col.text = rgb(002aff)
+                    bar_text_font = Star Cine
+                    bar_text_size = 12
                     bar_part_of_window = true
                     # example buttons (R -> L)
                     # hyprbars-button = color, size, on-click
