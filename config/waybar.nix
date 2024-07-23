@@ -200,109 +200,109 @@ in
         }
       ];
       style = concatStrings [
-       ''
-       @import "latte.css";
+        ''
+                 @import "latte.css";
 
-* {
-  font-family: Star Cine
-  #Bold Italic 25
-  #FantasqueSansMono Nerd Font;
-  font-size: 14px;
-  font-weight: bold;
-  min-height: 0;
-}
-#waybar {
-  background-color: #003300;
-  color: #00ff00;
-  margin: 3px 3px;
-}
-#workspaces {
-  border-radius: 1rem;
-  margin: 5px;
-  background-color: #004d00;
-  color: #ffffff;
-  margin-left: 1rem;
-}
-#workspaces button {
-  color: #00cc00;
-  border-radius: 1rem;
-  padding: 0.4rem;
-}
-#workspaces button.active {
-  color: #80ff80;
-  background-color: #00b300; 
-}
-#workspaces button:hover {
-  color: #00FF0C;
-}
-#tray,
-#cpu {
-  background-color: #003300;
-  padding-right: 5px;
-}
-#memory {
-  background-color: #003300;
-  padding-right: 5px;
-  }
-#disk {
-  background-color: #003300;
-  padding-right: 5px;
-  }
-#network {
-  background-color: #003300;
-  padding-right: 5px;
-  padding-left: 5px;
-  }
-#idle_inhibitor {
-  background-color: #003300;
-    padding-left: 5px;
-}
-#custom-hyprbindings {
-  background-color: #003300;
-  }
-#custom-notification {
-  background-color: #003300;
-  padding-left: 10px;
-  }
-#clock,
-#pulseaudio {
-  background-color: #003300;
-  }
-#clock {
-  background-color: #003300;
-  color: #00ff00;
-  margin-left: 5px;
-}
-#pulseaudio {
-  background-color: #003300;
-  margin-left: 50px;
-  padding-right: 5px;
-}
-#tray {
-  background-color: #003300;
-  padding-right: 10px;
-  padding-left: 10px;
-}
-#custom-weather {
-    background-color: #003300;
-    transition: 0.3s;
-    padding-right: 5px;
-}
-#hyprland-window {
-    background-color: #003300;
-    color: #009933;
-    transition: 0.3s;
-    margin-right: 60px;
-    padding-right: 60px;
-}
-#custom-startmenu {
-    background-color: #003300;
-    transition: 0.3s;
-    border-radius: 20px;
-    padding: 5px 15px;
-    margin-right: 20px;
-}
-      ''
+          * {
+            font-family: Star Cine Font;
+            #Bold Italic 25
+            #FantasqueSansMono Nerd Font;
+            font-size: 14px;
+            font-weight: bold;
+            min-height: 0;
+          }
+          #waybar {
+            background-color: #003300;
+            color: #00ff00;
+            margin: 3px 3px;
+          }
+          #workspaces {
+            border-radius: 1rem;
+            margin: 5px;
+            background-color: #004d00;
+            color: #ffffff;
+            margin-left: 1rem;
+          }
+          #workspaces button {
+            color: #00cc00;
+            border-radius: 1rem;
+            padding: 0.4rem;
+          }
+          #workspaces button.active {
+            color: #80ff80;
+            background-color: #00b300;
+          }
+          #workspaces button:hover {
+            color: #00FF0C;
+          }
+          #tray,
+          #cpu {
+            background-color: #003300;
+            padding-right: 5px;
+          }
+          #memory {
+            background-color: #003300;
+            padding-right: 5px;
+            }
+          #disk {
+            background-color: #003300;
+            padding-right: 5px;
+            }
+          #network {
+            background-color: #003300;
+            padding-right: 5px;
+            padding-left: 5px;
+            }
+          #idle_inhibitor {
+            background-color: #003300;
+              padding-left: 5px;
+          }
+          #custom-hyprbindings {
+            background-color: #003300;
+            }
+          #custom-notification {
+            background-color: #003300;
+            padding-left: 10px;
+            }
+          #clock,
+          #pulseaudio {
+            background-color: #003300;
+            }
+          #clock {
+            background-color: #003300;
+            color: #00ff00;
+            margin-left: 5px;
+          }
+          #pulseaudio {
+            background-color: #003300;
+            margin-left: 50px;
+            padding-right: 5px;
+          }
+          #tray {
+            background-color: #003300;
+            padding-right: 10px;
+            padding-left: 10px;
+          }
+          #custom-weather {
+              background-color: #003300;
+              transition: 0.3s;
+              padding-right: 5px;
+          }
+          #hyprland-window {
+              background-color: #003300;
+              color: #009933;
+              transition: 0.3s;
+              margin-right: 60px;
+              padding-right: 60px;
+          }
+          #custom-startmenu {
+              background-color: #003300;
+              transition: 0.3s;
+              border-radius: 20px;
+              padding: 5px 15px;
+              margin-right: 20px;
+          }
+        ''
       ];
     };
   }
