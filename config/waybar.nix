@@ -28,8 +28,8 @@ in
             "cpu"
             "memory"
             "disk"
-            "disk2"
-            "disk3"
+            "disk#disk2"
+            "disk#disk3"
             "network"
             "idle_inhibitor"
           ];
@@ -81,12 +81,12 @@ in
             tooltip = true;
             path = "/";
           };
-          "disk2" = {
+          "disk#disk2" = {
             format = " {free}";
             tooltip = true;
             path = "/var/plex/movies2";
           };
-          "disk3" = {
+          "disk#disk3" = {
             format = " {free}";
             tooltip = true;
             path = "/boot";
