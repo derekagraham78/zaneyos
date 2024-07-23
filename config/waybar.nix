@@ -126,25 +126,25 @@ in
           };
           "custom/exit" = {
             tooltip = false;
-            format = "";
+            format = "<span font='icon'></span>";
             on-click = "sleep 0.1 && wlogout";
           };
           "custom/startmenu" = {
             tooltip = false;
-            format = "≡";
+            format = "<span font='icon'>≡</span>";
             # exec = "rofi -show drun";
             on-click = "sleep 0.1 && rofi-launcher";
           };
           "custom/hyprbindings" = {
             tooltip = false;
-            format = "♠";
+            format = "<span font='icon'>♠</span>";
             on-click = "sleep 0.1 && list-hypr-bindings";
           };
           "idle_inhibitor" = {
             format = "{icon}";
             format-icons = {
-              activated = "";
-              deactivated = "";
+              activated = "<span font='icon'></span>";
+              deactivated = "<span font='icon'></span>";
             };
             tooltip = "true";
           };
