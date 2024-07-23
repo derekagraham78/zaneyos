@@ -212,7 +212,7 @@ in
   margin-left: 1rem;
 }
 #workspaces button {
-  color: #000000;
+  color: #008000;
   border-radius: 1rem;
   padding: 0.4rem;
 }
