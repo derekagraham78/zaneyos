@@ -207,7 +207,7 @@ in
 #workspaces {
   border-radius: 1rem;
   margin: 5px;
-  background-color: #008000;
+  background-color: #004d00;
   color: #ffffff;
   margin-left: 1rem;
 }
