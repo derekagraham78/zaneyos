@@ -23,6 +23,7 @@ in
       plugins = [
       pkgs.hyprlandPlugins.hyprbars
       pkgs.hyprlandPlugins.hyprexpo
+      pkgs.hyprlandPlugins.hyprtrails
       ];
       extraConfig = let
         modifier = "SUPER";
@@ -38,10 +39,12 @@ env = XDG_SESSION_DESKTOP, Hyprland
 env = GDK_BACKEND, wayland, x11
 env = CLUTTER_BACKEND, wayland
 env = QT_QPA_PLATFORM=wayland;xcb
+env = XCURSOR_SIZE,32
 #env = QT_WAYLAND_DISABLE_WINDOWDECORA1
 #env = QT_AUTO_SCREEN_SCALE_FACTOR, 1
 #env = SDL_VIDEODRIVER, x11
 env = MOZ_ENABLE_WAYLAND, 1
+# Startup Apps
 exec-once = swww-daemon --format xrgb
 exec-once = swayidle
 exec-once = variety
@@ -52,6 +55,7 @@ exec-once = waybar
 exec-once = killall -q swaync;sleep .5 && swaync
 exec-once = nm-applet --indicator
 exec-once = lxqt-policykit-agent
+# Minitor Setup
 monitor=HDMI-A-3, 1920x1080, 0x0, 1
 monitor=HDMI-A-1, 1920x1080, 1920x0, 1
 #xwayland {
@@ -59,7 +63,7 @@ monitor=HDMI-A-1, 1920x1080, 1920x0, 1
 #         }
 # toolkit-specific scale
 # env = GDK_SCALE,1
-env = XCURSOR_SIZE,32
+# Workspace Configuration
 workspace = name:1-Web,monitor:HDMI-A-3,default:true,persistant:true
 workspace = name:2-Terms,monitor:HDMI-A-3,default:true,persistant:true
 workspace = name:3-Files,monitor:HDMI-A-3,default:true,persistant:true
@@ -72,6 +76,7 @@ workspace = name:7-Misc,monitor:HDMI-A-1,default:true,persistant:true
 #workspace = 9,monitor:HDMI-A-1,default:true,persistant:true
 #workspace = 10,monitor:HDMI-A-1,default:true,persistant:true
 ${extraMonitorSettings}
+# General Settings
 general {
 gaps_in = 1
 gaps_out = 1
@@ -82,11 +87,13 @@ resize_on_border = true
 col.active_border = rgb(${config.stylix.base16Scheme.base08}) rgb(${config.stylix.base16Scheme.base0C}) 45deg
 col.inactive_border = rgb(${config.stylix.base16Scheme.base01})
 }
+# Grouped Apps
 group {
   groupbar {
     stacked = false
   }
 }
+# Inputs
 input {
 kb_layout = us
 kb_options = grp:alt_shift_toggle
@@ -100,6 +107,7 @@ sensitivity = 0 # -1.0 - 1.0, 0 means no modification.
 accel_profile = flat
 }
 $grouped-apps = Signal|discord|Element|org.telegram.desktop
+# Some Rules for Windows
 windowrule = noborder,^(wofi)$
 windowrule = center,^(wofi)$
 windowrule = center,^(steam)$
@@ -130,6 +138,7 @@ windowrulev2 = workspace name:3-Files, class:^(org.gnome.Nautilus)$
 windowrulev2 = workspace name:2-Terms, class:^(kitty)$
 windowrulev2 = float,class:^(org.gnome.SystemMonitor)$
 windowrulev2 = size 20% 40%,class:^(org.gnome.SystemMonitor)$
+# Open up my regular apps
 exec-once = org.signal.Signal
 exec-once = telegram-desktop
 exec-once = discord
@@ -139,12 +148,14 @@ gestures {
 workspace_swipe = true
 workspace_swipe_fingers   = 3
 }
+# Misc
 misc {
   initial_workspace_tracking = 0
   vrr = 1
   mouse_move_enables_dpms = true
   key_press_enables_dpms = false
 }
+# Animations
 animations {
 enabled = yes
 bezier = wind, 0.05, 0.9, 0.1, 1.05
@@ -159,6 +170,7 @@ animation = border, 1, 1, liner
 animation = fade, 1, 10, default
 animation = workspaces, 1, 5, wind
 }
+# Decorations
 decoration {
 rounding = 30
 drop_shadow = true
@@ -176,8 +188,10 @@ new_optimizations = on
 ignore_opacity = off
 }
 }
+# Plugins
 plugin {
 hyprtrails {
+  color = rgba(64f257)
 }
 hyprexpo {
         columns = 3
@@ -207,6 +221,7 @@ dwindle {
 pseudotile = true
 preserve_split = true
 }
+# Binds 
 bind = ${modifier},Return,exec,${terminal}
 bind = ${modifier}SHIFT,Return,exec,rofi-launcher
 bind = ${modifier}SHIFT,W,exec,web-search
