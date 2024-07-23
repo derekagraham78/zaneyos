@@ -207,7 +207,7 @@ in
 #workspaces {
   border-radius: 1rem;
   margin: 5px;
-  background-color: #E9C7FF;
+  background-color: #008000;
   color: #ffffff;
   margin-left: 1rem;
 }
@@ -218,7 +218,7 @@ in
 }
 #workspaces button.active {
   color: #ffffff;
-  background-color: #BD0BAA; 
+  background-color: #00b300; 
 }
 #workspaces button:hover {
   color: #00FF0C;
