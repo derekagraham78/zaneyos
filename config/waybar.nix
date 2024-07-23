@@ -72,7 +72,7 @@ in
           };
           "cpu" = {
             interval = 5;
-            format = "<span font='icon'></span> {usage:2}%";
+            format = "<span font='icon'></span> {usage}%";
             tooltip = true;
           };
           "disk" = {
