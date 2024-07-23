@@ -518,6 +518,7 @@
     earlySetup = true;
     packages = with pkgs; [
       nerdfonts
+      rPackages.trekfont
       terminus_font
       (nerdfonts.override {fonts = ["JetBrainsMono"];})
       terminus-nerdfont
