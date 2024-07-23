@@ -374,6 +374,7 @@
     appimage-run
     yad
     inxi
+    cpu-x
     playerctl
     nh
     nixfmt-rfc-style
