@@ -73,11 +73,17 @@ ${extraMonitorSettings}
 general {
 gaps_in = 1
 gaps_out = 1
-border_size = 15
+border_size = 10
+no_border_on_floating = true
 layout = dwindle
 resize_on_border = true
 col.active_border = rgb(${config.stylix.base16Scheme.base08}) rgb(${config.stylix.base16Scheme.base0C}) 45deg
 col.inactive_border = rgb(${config.stylix.base16Scheme.base01})
+}
+group {
+  group:groupbar {
+    stacked = true  
+  }
 }
 input {
 kb_layout = us
