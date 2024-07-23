@@ -90,8 +90,11 @@ in
             group {
               groupbar {
                 stacked = false
+                font_family = Star Cine
                 col.active = rgb(25f20f)
                 col.inactive = rgb(d40438)
+                col.locked_active = rgb(25f20f)
+                col.locked_inactive = rgb(d40438)
               }
             }
             # Inputs
