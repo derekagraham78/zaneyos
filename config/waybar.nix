@@ -205,7 +205,7 @@ in
 
           * {
             font-family: Star Cine;
-            font-size: 18px;
+            font-size: 14px;
             font-weight: bold;
             min-height: 0;
           }
@@ -222,12 +222,12 @@ in
             margin-left: 1rem;
           }
           #workspaces button {
-            color: #002aff;
+            color: #ffffff;
             border-radius: 1rem;
             padding: 0.4rem;
           }
           #workspaces button.active {
-            color: #002aff;
+            color: #ffffff;
             background-color: #00b300;
           }
           #workspaces button:hover {
@@ -268,7 +268,7 @@ in
             }
           #clock {
             background-color: #003300;
-            color: #002aff;
+            color: #ffffff;
             margin-left: 5px;
           }
           #pulseaudio {
