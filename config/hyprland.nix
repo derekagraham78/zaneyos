@@ -221,6 +221,10 @@ dwindle {
 pseudotile = true
 preserve_split = true
 }
+debug {
+    disable_logs = false
+    enable_stdout_logs = true
+    }
 # Binds 
 bind = ${modifier},Return,exec,${terminal}
 bind = ${modifier}SHIFT,Return,exec,rofi-launcher
