@@ -91,6 +91,7 @@ in
               groupbar {
                 stacked = false
                 font_family = Star Cine
+                font_size = 10
                 height = 20
                 text_color = rgb(002aff)
                 col.active = rgb(25f20f)
