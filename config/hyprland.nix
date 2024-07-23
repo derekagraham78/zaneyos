@@ -82,7 +82,7 @@ col.inactive_border = rgb(${config.stylix.base16Scheme.base01})
 }
 group {
   groupbar {
-    stacked = true  
+    stacked = false
   }
 }
 input {
