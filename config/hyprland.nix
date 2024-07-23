@@ -91,7 +91,7 @@ in
               groupbar {
                 stacked = false
                 col.active = rgb(25f20f)
-                col.inactive = rgb(1b9eb3)
+                col.inactive = rgb(d40438)
               }
             }
             # Inputs
