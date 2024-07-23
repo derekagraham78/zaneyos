@@ -265,7 +265,8 @@ in
             bind = ${modifier},up,movefocus,u
             bind = ${modifier},down,movefocus,d
             bind = ${modifier},h,movefocus,l
-            bind = ${modifier},l,movefocus,r
+            bind = ${modifier},l,exec,swaylock -C ~/.config/swaylock/lock.conf
+            #movefocus,r
             bind = ${modifier},k,movefocus,u
             bind = ${modifier},j,movefocus,d
             bind = ${modifier},1,workspace,name:1-Web
