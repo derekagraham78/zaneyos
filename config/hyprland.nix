@@ -29,8 +29,9 @@ in
       in
         concatStrings [
           ''
+# Environment Variables
 env = NIXPKGS_ALLOW_UNFREE, 1
-env = NIXOS_OZONE_WL=1
+env = NIXOS_OZONE_WL=1z
 env = XDG_CURRENT_DESKTOP, Hyprland
 env = XDG_SESSION_TYPE, wayland
 env = XDG_SESSION_DESKTOP, Hyprland
@@ -217,7 +218,7 @@ bind = ${modifier}CONTROL,PRINT,exec,grimblast save area -| swappy -f -
 bind = ${modifier}SHIFT,N,exec,swaync-client -rs
 bind = ${modifier},W,exec,${browser}
 bind = ${modifier},V,exec, code
-bind = ${modifier},Z,grave, hyprexpo:expo,toggle
+bind = ${modifier},Z, hyprexpo:expo,toggle
 bind = ${modifier},N,exec, nautilus
 bind = ${modifier},E,exec,emopicker9000
 bind = ${modifier},D,exec,discord
