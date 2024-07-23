@@ -93,7 +93,7 @@ in
                 font_family = Star Cine
                 font_size = 10
                 height = 20
-                text_color = rgb(002aff)
+                text_color = rgb(ffffff)
                 col.active = rgb(25f20f)
                 col.inactive = rgb(009900)
                 col.locked_active = rgb(25f20f)
@@ -213,7 +213,7 @@ in
                 }
                 hyprbars {
                     bar_height = 25
-                    bar_color = rgb(003300)
+                    bar_color = rgb(ffffff)
                     col.text = rgb(002aff)
                     bar_text_font = Star Cine
                     bar_text_size = 16

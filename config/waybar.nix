@@ -288,7 +288,7 @@ in
           }
           #hyprland-window {
               background-color: #003300;
-              color: #009933;
+              color: #ffffff;
               transition: 0.3s;
               margin-right: 60px;
               padding-right: 60px;
