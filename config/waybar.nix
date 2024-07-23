@@ -291,7 +291,7 @@ in
               color: #ffffff;
               transition: 0.3s;
               margin-right: 60px;
-              padding: 80px;
+              padding: 130px;
           }
           #custom-startmenu {
               background-color: #003300;
