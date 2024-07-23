@@ -292,7 +292,7 @@ in
               font-size: 8px;
               transition: 0.3s;
               margin-right: 60px;
-              padding: 250px;
+              padding: 550px;
           }
           #custom-startmenu {
               background-color: #003300;
