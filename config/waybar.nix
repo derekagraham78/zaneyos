@@ -131,7 +131,7 @@ in
           };
           "custom/startmenu" = {
             tooltip = false;
-            format = "";
+            format = "≡";
             # exec = "rofi -show drun";
             on-click = "sleep 0.1 && rofi-launcher";
           };
