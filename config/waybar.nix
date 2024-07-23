@@ -102,7 +102,7 @@ in
             spacing = 12;
           };
           "pulseaudio" = {
-            format = "<span font='icon'>{icon}</span> {volume}% {format_source}";
+            format = "<span font='icon'>{icon}</span>{volume}%{format_source}";
             format-bluetooth = "{volume}% {icon}<span font='icon'></span> {format_source}";
             format-bluetooth-muted = " {icon} {format_source}";
             format-muted = " {format_source}";
