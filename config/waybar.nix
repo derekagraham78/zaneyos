@@ -195,7 +195,7 @@ in
 
 * {
   font-family: FantasqueSansMono Nerd Font;
-  font-size: 17px;
+  font-size: 14px;
   font-weight: bold;
   min-height: 0;
 }
