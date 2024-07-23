@@ -217,7 +217,7 @@ in
   padding: 0.4rem;
 }
 #workspaces button.active {
-  color: #ffffff;
+  color: #80ff80;
   background-color: #00b300; 
 }
 #workspaces button:hover {

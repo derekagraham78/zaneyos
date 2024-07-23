@@ -179,8 +179,8 @@ hyprbars {
         bar_part_of_window = true
         # example buttons (R -> L)
         # hyprbars-button = color, size, on-click
-        hyprbars-button = rgb(E9C7FF), 10, 󰖭, hyprctl dispatch killactive
-        hyprbars-button = rgb(BD0BAA), 10, , hyprctl dispatch fullscreen 1
+        #hyprbars-button = rgb(E9C7FF), 10, 󰖭, hyprctl dispatch killactive
+        #hyprbars-button = rgb(BD0BAA), 10, , hyprctl dispatch fullscreen 1
         }
 }
 dwindle {
