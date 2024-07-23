@@ -122,7 +122,7 @@ in
             windowrulev2 = size 20% 40%,class:^(1Password)$
             windowrulev2 = minsize 1 1, title:^()$,class:^(steam)$
             windowrulev2 = opacity 0.9 0.7, class:^(Brave)$
-            windowrulev2 = opacity 0.9 0.7, class:^(org.gnome.Nautilus)$
+            windowrulev2 = opacity 1.0 1.0, class:^(org.gnome.Nautilus)$
             #windowrulev2 = nomaximizerequest, class:.* # You'll probably like this.
             windowrulev2 = workspace name:7-Misc, class:^(deluge)$
             windowrulev2 = workspace name:7-Misc, class:^(floorp)$
@@ -174,7 +174,7 @@ in
             rounding = 30
             drop_shadow = true
             shadow_range = 8
-            inactive_opacity = 0.4
+            inactive_opacity = 0.8 #0.4
             active_opacity = 1.0
             fullscreen_opacity = 1.0
             shadow_render_power = 3
@@ -184,7 +184,7 @@ in
             size = 5
             passes = 4
             new_optimizations = on
-            ignore_opacity = off
+            ignore_opacity = on
             }
             }
             # Plugins
