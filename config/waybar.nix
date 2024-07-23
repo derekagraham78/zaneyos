@@ -205,13 +205,13 @@ in
 
           * {
             font-family: Star Cine;
-            font-size: 14px;
+            font-size: 18px;
             font-weight: bold;
             min-height: 0;
           }
           #waybar {
             background-color: #003300;
-            color: #002aff;
+            color: #ffffff;
             margin: 3px 3px;
           }
           #workspaces {
