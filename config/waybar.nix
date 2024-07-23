@@ -60,7 +60,7 @@ in
             tooltip-format = "<big>{:%A, %B %d, %Y }</big>\n";
           };
           "hyprland/window" = {
-            max-length = 60;
+            max-length = 80;
             separate-outputs = false;
             rewrite = {
               "" = " 🙈 No Windows? ";
@@ -291,13 +291,12 @@ in
               color: #ffffff;
               transition: 0.3s;
               margin-right: 60px;
-              padding-right: 60px;
+              padding: 80px;
           }
           #custom-startmenu {
               background-color: #003300;
               transition: 0.3s;
               border-radius: 20px;
-              padding: 5px 15px;
               margin-right: 20px;
           }
         ''
