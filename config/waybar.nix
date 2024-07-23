@@ -86,7 +86,7 @@ in
               "󰤥"
               "󰤨"
             ];
-            format-ethernet = " {bandwidthDownBits}	{bandwidthUpBits} {bandwidthDownOctets}";
+            format-ethernet = "↓ {bandwidthDownBits} ↑ {bandwidthUpBits}";
             format-wifi = "{icon} {signalStrength}%";
             format-disconnected = "󰤮";
             tooltip = false;
