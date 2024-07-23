@@ -42,7 +42,7 @@ in
           ];
 
           "hyprland/workspaces" = {
-            format = "{name}";
+            format = "<span font='icon'></span>{name}";
             format-icons = {
               default = "Δ ";
               active = "α ";
@@ -55,7 +55,7 @@ in
             format =
               if clock24h == true
               then '' {:L%H:%M}''
-              else ''  {:L%A, %B %d, %Y %I:%M %p}'';
+              else ''<span font='icon'></span>  {:L%A, %B %d, %Y %I:%M %p}'';
             tooltip = true;
             tooltip-format = "<big>{:%A, %B %d, %Y }</big>\n";
           };
@@ -68,21 +68,21 @@ in
           };
           "memory" = {
             interval = 5;
-            format = " {}%";
+            format = "<span font='icon'></span> {}%";
             tooltip = true;
           };
           "cpu" = {
             interval = 5;
-            format = " {usage:2}%";
+            format = "<span font='icon'></span> {usage:2}%";
             tooltip = true;
           };
           "disk" = {
-            format = " {free}";
+            format = "<span font='icon'></span> {free}";
             tooltip = true;
             path = "/";
           };
           "disk#disk2" = {
-            format = " {free}";
+            format = "<span font='icon'></span> {free}";
             tooltip = true;
             path = "/var/plex/movies2";
           };
@@ -94,7 +94,7 @@ in
               "󰤥"
               "󰤨"
             ];
-            format-ethernet = "↓ {bandwidthDownBits} ↑ {bandwidthUpBits}";
+            format-ethernet = "<span font='icon'>↓</span> {bandwidthDownBits} ↑ {bandwidthUpBits}";
             format-wifi = "{icon} {signalStrength}%";
             format-disconnected = "󰤮";
             tooltip = true;
@@ -103,8 +103,8 @@ in
             spacing = 12;
           };
           "pulseaudio" = {
-            format = "{icon} {volume}% {format_source}";
-            format-bluetooth = "{volume}% {icon} {format_source}";
+            format = "<span font='icon'>{icon}</span> {volume}% {format_source}";
+            format-bluetooth = "{volume}% {icon}<span font='icon'></span> {format_source}";
             format-bluetooth-muted = " {icon} {format_source}";
             format-muted = " {format_source}";
             format-source = " {volume}%";
@@ -150,7 +150,7 @@ in
           };
           "custom/notification" = {
             tooltip = false;
-            format = "{icon} {}";
+            format = "<span font='icon'>{icon}</span> {}";
             format-icons = {
               notification = "<span foreground='red'><sup></sup></span>";
               none = "";
@@ -168,7 +168,7 @@ in
             escape = true;
           };
           "custom/weather" = {
-            "format" = "{}°";
+            "format" = "<span font='icon'>{}°</span>";
             "tooltip" = true;
             "interval" = 3600;
             "exec" = "wttrbar --fahrenheit --mph";
