@@ -201,7 +201,7 @@ in
 }
 #waybar {
   background-color: #003300;
-  color: #009933;
+  color: #00ff00;
   margin: 3px 3px;
 }
 #workspaces {
