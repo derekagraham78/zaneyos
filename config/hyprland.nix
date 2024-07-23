@@ -190,9 +190,9 @@ ignore_opacity = off
 }
 # Plugins
 plugin {
-    #hyprtrails {
-    #    color = rgba(64f257)
-    #}
+    hyprtrails {
+        color = rgba(ffaa00ff)
+    }
     hyprexpo {
         columns = 3
         gap_size = 5
