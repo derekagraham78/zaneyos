@@ -225,65 +225,65 @@ in
 }
 #tray,
 #cpu {
-  background-color: #33cc33;
+  background-color: #003300;
   padding-right: 5px;
 }
 #memory {
-  background-color: #33cc33;
+  background-color: #003300;
   padding-right: 5px;
   }
 #disk {
-  background-color: #33cc33;
+  background-color: #003300;
   padding-right: 5px;
   }
 #network {
-  background-color: #33cc33;
+  background-color: #003300;
   padding-right: 5px;
   }
 #idle_inhibitor {
-  background-color: #33cc33;
+  background-color: #003300;
     padding-left: 5px;
 }
 #custom-hyprbindings {
-  background-color: #33cc33;
+  background-color: #003300;
   }
 #custom-notification {
-  background-color: #33cc33;
+  background-color: #003300;
   padding-left: 10px;
   }
 #clock,
 #pulseaudio {
-  background-color: #33cc33;
+  background-color: #003300;
   }
 #clock {
-  background-color: #33cc33;
-  color: #003300;
+  background-color: #003300;
+  color: #009933;
   margin-left: 5px;
 }
 #pulseaudio {
-  background-color: #33cc33;
+  background-color: #003300;
   margin-left: 50px;
   padding-right: 5px;
 }
 #tray {
-  background-color: #33cc33;
+  background-color: #003300;
   padding-right: 10px;
   padding-left: 10px;
 }
 #custom-weather {
-    background-color: #33cc33;
+    background-color: #003300;
     transition: 0.3s;
     padding-right: 5px;
 }
 #hyprland-window {
-    background-color: #33cc33;
-    color: #003300;
+    background-color: #003300;
+    color: #009933;
     transition: 0.3s;
     margin-right: 60px;
     padding-right: 60px;
 }
 #custom-startmenu {
-    background-color: #33cc33;
+    background-color: #003300;
     transition: 0.3s;
     border-radius: 20px;
     padding: 5px 15px;
