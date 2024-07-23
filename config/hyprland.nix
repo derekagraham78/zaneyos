@@ -22,6 +22,7 @@ in
       systemd.enable = true;
       plugins = [
       pkgs.hyprlandPlugins.hyprbars
+      pkgs.hyprlandPlugins.hyprexpo
       ];
       extraConfig = let
         modifier = "SUPER";
@@ -138,9 +139,10 @@ workspace_swipe = true
 workspace_swipe_fingers   = 3
 }
 misc {
-initial_workspace_tracking = 0
-mouse_move_enables_dpms = true
-key_press_enables_dpms = false
+  initial_workspace_tracking = 0
+  vrr = 1
+  mouse_move_enables_dpms = true
+  key_press_enables_dpms = false
 }
 animations {
 enabled = yes
@@ -176,6 +178,17 @@ ignore_opacity = off
 plugin {
 hyprtrails {
 }
+hyprexpo {
+        columns = 3
+        gap_size = 5
+        bg_col = rgb(111111)
+        workspace_method = center current # [center/first] [workspace] e.g. first 1 or center m+1
+
+        enable_gesture = false # laptop touchpad
+        #gesture_fingers = 3  # 3 or 4
+        #gesture_distance = 300 # how far is the "max"
+        #gesture_positive = true # positive = swipe down. Negative = swipe up.
+    }
 hyprbars {
         # example config
         bar_height = 20
@@ -204,6 +217,7 @@ bind = ${modifier}CONTROL,PRINT,exec,grimblast save area -| swappy -f -
 bind = ${modifier}SHIFT,N,exec,swaync-client -rs
 bind = ${modifier},W,exec,${browser}
 bind = ${modifier},V,exec, code
+bind = ${modifier}.z,grave, hyprexpo:expo,toggle
 bind = ${modifier},N,exec, nautilus
 bind = ${modifier},E,exec,emopicker9000
 bind = ${modifier},D,exec,discord
