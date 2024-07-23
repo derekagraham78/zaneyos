@@ -41,7 +41,7 @@ env = QT_QPA_PLATFORM=wayland;xcb
 #env = SDL_VIDEODRIVER, x11
 env = MOZ_ENABLE_WAYLAND, 1
 exec-once = swww-daemon --format xrgb
-#exec-once = swayidle
+exec-once = swayidle
 exec-once = variety
 exec-once = dbus-update-activation-environment --systemd --all
 exec-once = systemctl --user import-environment QT_QPA_PLATFORMTHEME WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
@@ -72,8 +72,8 @@ workspace = name:7-Misc,monitor:HDMI-A-1,default:true,persistant:true
 ${extraMonitorSettings}
 general {
 gaps_in = 2
-gaps_out = 8
-border_size = 1
+gaps_out = 3
+border_size = 5
 layout = dwindle
 resize_on_border = true
 col.active_border = rgb(${config.stylix.base16Scheme.base08}) rgb(${config.stylix.base16Scheme.base0C}) 45deg
