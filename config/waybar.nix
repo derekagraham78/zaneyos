@@ -211,7 +211,7 @@ in
           }
           #waybar {
             background-color: #003300;
-            color: #00ff00;
+            color: #002aff;
             margin: 3px 3px;
           }
           #workspaces {
@@ -222,12 +222,12 @@ in
             margin-left: 1rem;
           }
           #workspaces button {
-            color: #00cc00;
+            color: #002aff;
             border-radius: 1rem;
             padding: 0.4rem;
           }
           #workspaces button.active {
-            color: #80ff80;
+            color: #002aff;
             background-color: #00b300;
           }
           #workspaces button:hover {
