@@ -18,6 +18,7 @@ in
           layer = "top";
           position = "top";
           height = 1;
+          mode = "dock";
           modules-center = ["hyprland/workspaces"];
           modules-left = [
             "custom/startmenu"
