@@ -205,7 +205,7 @@ in
 
           * {
             font-family: Star Cine;
-            font-size: 14px;
+            font-size: 8px;
             font-weight: bold;
             min-height: 0;
           }
