@@ -157,6 +157,11 @@
     };
 
   programs = {
+    vscode = {
+        # needed for rust lang server and rust-analyzer extension
+        package = pkgs.vscode.fhsWithPackages (ps: with ps; [ rustup zlib openssl.dev pkg-config ]);
+        enable = true;
+    };
         git = {
       enable = true;
       #  userName = "derekagraham78";
@@ -333,7 +338,6 @@ environment.systemPackages = with pkgs; [
     pkgs.swayidle
     starship    
     wttrbar 
-    vscode-with-extensions
     element-desktop
     vivaldi
     floorp
