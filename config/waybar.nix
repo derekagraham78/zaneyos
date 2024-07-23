@@ -205,8 +205,6 @@ in
 
           * {
             font-family: Star Cine Font;
-            #Bold Italic 25
-            #FantasqueSansMono Nerd Font;
             font-size: 14px;
             font-weight: bold;
             min-height: 0;
