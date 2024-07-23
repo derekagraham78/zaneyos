@@ -81,7 +81,7 @@ col.active_border = rgb(${config.stylix.base16Scheme.base08}) rgb(${config.styli
 col.inactive_border = rgb(${config.stylix.base16Scheme.base01})
 }
 group {
-  group:groupbar {
+  groupbar {
     stacked = true  
   }
 }
