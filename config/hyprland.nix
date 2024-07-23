@@ -95,9 +95,9 @@ in
                 height = 20
                 text_color = rgb(002aff)
                 col.active = rgb(25f20f)
-                col.inactive = rgb(003300)
+                col.inactive = rgb(009900)
                 col.locked_active = rgb(25f20f)
-                col.locked_inactive = rgb(003300)
+                col.locked_inactive = rgb(009900)
               }
             }
             # Inputs
