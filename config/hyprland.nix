@@ -246,7 +246,8 @@ in
             bind = ${modifier},O,exec,obs
             bind = ${modifier}CONTROL,1,exec,1password
             bind = ${modifier}CONTROL,2,exec,swayidle -C ~/.config/swayidle/idle.conf
-            bind = ${modifier},C,exec,hyprpicker -a
+            bind = ${modifier}CONTROL,C,exec,hyprpicker -a
+            bind = ${modifier},C,exec,~/bin/chat.sh
             bind = ${modifier},G,exec,gimp
             bind = ${modifier}SHIFT,G,exec,godot4
             bind = ${modifier},T,exec,gnome-system-monitor
