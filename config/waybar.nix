@@ -200,8 +200,8 @@ in
   min-height: 0;
 }
 #waybar {
-  background-color: #33cc33;
-  color: #003300;
+  background-color: #003300;
+  color: #009933;
   margin: 3px 3px;
 }
 #workspaces {
