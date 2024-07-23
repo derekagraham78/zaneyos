@@ -204,7 +204,9 @@ in
        @import "latte.css";
 
 * {
-  font-family: FantasqueSansMono Nerd Font;
+  font-family: Star Cine
+  #Bold Italic 25
+  #FantasqueSansMono Nerd Font;
   font-size: 14px;
   font-weight: bold;
   min-height: 0;
