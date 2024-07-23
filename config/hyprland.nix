@@ -92,9 +92,9 @@ in
                 stacked = false
                 font_family = Star Cine
                 col.active = rgb(25f20f)
-                col.inactive = rgb(d40438)
+                col.inactive = rgb(003300)
                 col.locked_active = rgb(25f20f)
-                col.locked_inactive = rgb(d40438)
+                col.locked_inactive = rgb(003300)
               }
             }
             # Inputs
@@ -225,7 +225,7 @@ in
             preserve_split = true
             }
             debug {
-                disable_logs = false
+                disable_logs = true
                 }
             # Binds
             bind = ${modifier},Return,exec,${terminal}
