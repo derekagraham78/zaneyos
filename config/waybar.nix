@@ -60,7 +60,7 @@ in
             tooltip-format = "<big>{:%A, %B %d, %Y }</big>\n";
           };
           "hyprland/window" = {
-            max-length = 30;
+            max-length = 60;
             separate-outputs = false;
             rewrite = {
               "" = " 🙈 No Windows? ";
