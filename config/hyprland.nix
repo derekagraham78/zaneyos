@@ -215,7 +215,7 @@ in
                     bar_height = 20
                     bar_buttons_alignment  = "center"
                     bar_color = rgb(003300)
-                    col.text = rgb(00ff00)
+                    col.text = rgb(002aff)
                     bar_part_of_window = true
                     # example buttons (R -> L)
                     # hyprbars-button = color, size, on-click
