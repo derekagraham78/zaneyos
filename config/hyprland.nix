@@ -213,8 +213,8 @@ in
                 }
                 hyprbars {
                     bar_height = 25
-                    bar_color = rgb(ffffff)
-                    col.text = rgb(002aff)
+                    bar_color = rgb(003300)
+                    col.text = rgb(ffffff)
                     bar_text_font = Star Cine
                     bar_text_size = 16
                     bar_part_of_window = false
