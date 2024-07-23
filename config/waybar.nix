@@ -29,7 +29,6 @@ in
             "memory"
             "disk"
             "disk#disk2"
-            "disk#disk3"
             "network"
             "idle_inhibitor"
           ];
@@ -82,7 +81,7 @@ in
             path = "/";
           };
           "disk#disk2" = {
-            format = "<span font='icon'></span> {free}";
+            format = "<span font='icon'></span>";
             tooltip = true;
             path = "/var/plex/movies2";
           };
