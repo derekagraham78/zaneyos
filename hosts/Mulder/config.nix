@@ -157,20 +157,15 @@
     };
 
   programs = {
-    vscode = {
-        # needed for rust lang server and rust-analyzer extension
-        package = pkgs.vscode.fhsWithPackages (ps: with ps; [ rustup zlib openssl.dev pkg-config ]);
+    git = {
         enable = true;
-    };
-        git = {
-      enable = true;
-      #  userName = "derekagraham78";
-      #  userEmail = "derekagraham78@icloud.com";
+        #  userName = "derekagraham78";
+        #  userEmail = "derekagraham78@icloud.com";
     };
     zsh = {
-      enable = false;
-      # Your zsh config
-      ohMyZsh = {
+        enable = false;
+        # Your zsh config
+        ohMyZsh = {
         enable = true;
         plugins = ["git" "python" "man" "1password"];
         theme = "aussiegeek";
@@ -332,6 +327,7 @@ users = {
     mutableUsers = true;
 };
 environment.systemPackages = with pkgs; [
+    pkgs.vscode-fhs
     pkgs.kdePackages.gwenview
     pkgs.sway
     pkgs.swaylock-effects
@@ -342,7 +338,7 @@ environment.systemPackages = with pkgs; [
     vivaldi
     floorp
     vivaldi-ffmpeg-codecs
-	  aspell
+	aspell
     nanorc
     variety
     wget
