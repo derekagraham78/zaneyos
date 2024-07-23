@@ -241,6 +241,7 @@ in
 #network {
   background-color: #003300;
   padding-right: 5px;
+  padding-left: 5px;
   }
 #idle_inhibitor {
   background-color: #003300;
