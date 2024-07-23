@@ -289,6 +289,7 @@ in
           #hyprland-window {
               background-color: #003300;
               color: #ffffff;
+              font-size: 8px;
               transition: 0.3s;
               margin-right: 60px;
               padding: 130px;
