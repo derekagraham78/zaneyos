@@ -174,7 +174,7 @@ hyprbars {
         # example config
         bar_height = 20
         bar_buttons_alignment = center
-        bar_color = rgb(58D68D)
+        bar_color = rgb(009933)
         # example buttons (R -> L)
         # hyprbars-button = color, size, on-click
         hyprbars-button = rgb(E9C7FF), 10, 󰖭, hyprctl dispatch killactive
