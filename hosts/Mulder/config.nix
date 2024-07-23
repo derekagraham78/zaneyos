@@ -6,8 +6,7 @@
   username,
   options,
   ...
-}:
-{
+}: {
   imports = [
     ./hardware.nix
     ./users.nix
@@ -25,9 +24,9 @@
     # Kernel
     kernelPackages = pkgs.linuxPackages_zen;
     # This is for OBS Virtual Cam Support
-    kernelModules = [ "drivetemp"];
+    kernelModules = ["drivetemp"];
     kernelParams = ["reboot=acpi" "coretemp"];
-    extraModulePackages = [ ];
+    extraModulePackages = [];
     # Needed For Some Steam Games
     kernel.sysctl = {
       "vm.max_map_count" = 2147483642;
@@ -104,8 +103,7 @@
   drivers = {
     amdgpu.enable = true;
     nvidia.enable = false;
-    nvidia-prime = 
-    {
+    nvidia-prime = {
       enable = false;
       intelBusID = "";
       nvidiaBusID = "";
@@ -115,8 +113,8 @@
   vm.guest-services.enable = true;
   local.hardware-clock.enable = false;
   networking = {
-  # Enable networking
-     nameservers = ["100.100.100.100" "8.8.8.8" "1.1.1.1"];
+    # Enable networking
+    nameservers = ["100.100.100.100" "8.8.8.8" "1.1.1.1"];
     search = ["tail20553.ts.net"];
     firewall = {
       enable = true;
@@ -145,33 +143,33 @@
   i18n.defaultLocale = "en_US.UTF-8";
 
   i18n.extraLocaleSettings = {
-      LC_ADDRESS = "en_US.UTF-8";
-      LC_IDENTIFICATION = "en_US.UTF-8";
-      LC_MEASUREMENT = "en_US.UTF-8";
-      LC_MONETARY = "en_US.UTF-8";
-      LC_NAME = "en_US.UTF-8";
-      LC_NUMERIC = "en_US.UTF-8";
-      LC_PAPER = "en_US.UTF-8";
-      LC_TELEPHONE = "en_US.UTF-8";
-      LC_TIME = "en_US.UTF-8";
-    };
+    LC_ADDRESS = "en_US.UTF-8";
+    LC_IDENTIFICATION = "en_US.UTF-8";
+    LC_MEASUREMENT = "en_US.UTF-8";
+    LC_MONETARY = "en_US.UTF-8";
+    LC_NAME = "en_US.UTF-8";
+    LC_NUMERIC = "en_US.UTF-8";
+    LC_PAPER = "en_US.UTF-8";
+    LC_TELEPHONE = "en_US.UTF-8";
+    LC_TIME = "en_US.UTF-8";
+  };
 
   programs = {
     git = {
-        enable = true;
-        #  userName = "derekagraham78";
-        #  userEmail = "derekagraham78@icloud.com";
+      enable = true;
+      #  userName = "derekagraham78";
+      #  userEmail = "derekagraham78@icloud.com";
     };
     zsh = {
-        enable = false;
-        # Your zsh config
-        ohMyZsh = {
+      enable = false;
+      # Your zsh config
+      ohMyZsh = {
         enable = true;
         plugins = ["git" "python" "man" "1password"];
         theme = "aussiegeek";
       };
     };
-    xfconf.enable = true;  
+    xfconf.enable = true;
     hyprland.enable = true;
     xwayland.enable = true;
     firefox.enable = true;
@@ -266,79 +264,80 @@
         thunar-volman
       ];
     };
-};
-systemd = {  
-  services = {
-    ownership = {
-      path = [pkgs.zsh];
-      serviceConfig = {
-        ExecStart = "/root/bin/ownership-update";
-        Type = "oneshot";
-        User = "root";
+  };
+  systemd = {
+    services = {
+      ownership = {
+        path = [pkgs.zsh];
+        serviceConfig = {
+          ExecStart = "/root/bin/ownership-update";
+          Type = "oneshot";
+          User = "root";
+        };
+      };
+      backupmyconfs = {
+        path = [pkgs.zsh];
+        serviceConfig = {
+          ExecStart = "/home/dgraham/bin/check4update";
+          Type = "oneshot";
+          User = "dgraham";
+        };
+      };
+      flatpak-repo = {
+        path = [pkgs.flatpak];
+        script = ''
+          flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+        '';
       };
     };
-    backupmyconfs = {
-      path = [pkgs.zsh];
-      serviceConfig = {
-        ExecStart = "/home/dgraham/bin/check4update";
-        Type = "oneshot";
-        User = "dgraham";
+    timers = {
+      ownership = {
+        timerConfig = {
+          OnBootSec = "15m";
+          OnUnitActiveSec = "15m";
+          Unit = "ownership.service";
+        };
       };
-    };
-    flatpak-repo = {
-    path = [pkgs.flatpak];
-    script = ''
-      flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-    '';
+      backupmyconfs = {
+        timerConfig = {
+          OnBootSec = "60m";
+          OnUnitActiveSec = "60m";
+          Unit = "backupmyconfs.service";
+        };
+      };
     };
   };
-  timers = {
-    ownership = {
-      timerConfig = {
-        OnBootSec = "15m";
-        OnUnitActiveSec = "15m";
-        Unit = "ownership.service";
-      };
-    };
-    backupmyconfs = {
-      timerConfig = {
-        OnBootSec = "60m";
-        OnUnitActiveSec = "60m";
-        Unit = "backupmyconfs.service";
-      };
+  system = {
+    autoUpgrade = {
+      enable = true;
+      flake = "github:derekagraham78/nixos/flake.nix";
+      flags = [
+        "--update-input"
+        "nixpkgs"
+        "-L" # print build logs
+      ];
+      dates = "02:00";
+      randomizedDelaySec = "45min";
     };
   };
-}; 
-system = {
-  autoUpgrade = {
-    enable = true;
-    flake = "github:derekagraham78/nixos/flake.nix";
-    flags = [
-      "--update-input"
-      "nixpkgs"
-      "-L" # print build logs
-    ];
-    dates = "02:00";
-    randomizedDelaySec = "45min";
-  };
-};
-nixpkgs.config.allowUnfree = true;
-users = {
+  nixpkgs.config.allowUnfree = true;
+  users = {
     mutableUsers = true;
-};
-environment.systemPackages = with pkgs; [
+  };
+  environment.systemPackages = with pkgs; [
     pkgs.vscode-fhs
+    pkgs.fontconfig
     pkgs.kdePackages.gwenview
     pkgs.sway
     pkgs.swaylock-effects
     pkgs.swayidle
-    starship    
-    wttrbar 
+    starship
+    wttrbar
     element-desktop
     vivaldi
     floorp
     vivaldi-ffmpeg-codecs
-	aspell
+    aspell
     nanorc
     variety
     wget
@@ -529,54 +528,54 @@ environment.systemPackages = with pkgs; [
     ZANEYOS_VERSION = "2.2";
     ZANEYOS = "true";
   };
-# Extra Portal Configuration
-xdg.portal = {
+  # Extra Portal Configuration
+  xdg.portal = {
     enable = true;
     wlr.enable = true;
     extraPortals = [
-    pkgs.xdg-desktop-portal-hyprland
-    pkgs.xdg-desktop-portal-gtk
-    pkgs.xdg-desktop-portal
+      pkgs.xdg-desktop-portal-hyprland
+      pkgs.xdg-desktop-portal-gtk
+      pkgs.xdg-desktop-portal
     ];
     configPackages = [
       pkgs.xdg-desktop-portal-hyprland
       pkgs.xdg-desktop-portal-gtk
       pkgs.xdg-desktop-portal
     ];
-};
+  };
 
-# Services to start
-services = {
-  emacs = {
-    enable = false;
-    package = pkgs.emacs;
-  };
-  resolved = {
-    enable = true;
-    dnssec = "true";
-    domains = ["~."];
-    fallbackDns = ["1.1.1.1#one.one.one.one" "1.0.0.1#one.one.one.one"];
-    dnsovertls = "true";
-  };
-  tailscale = {
-    enable = true;
-  };
-  vsftpd = {
-    enable = true;
-    writeEnable = true;
-    localUsers = true;
-    userlist = ["dgraham" "root" "nginx"];
-    userlistEnable = true;
-    virtualUseLocalPrivs = true;
-  };
-  memcached.enable = true;
+  # Services to start
+  services = {
+    emacs = {
+      enable = false;
+      package = pkgs.emacs;
+    };
+    resolved = {
+      enable = true;
+      dnssec = "true";
+      domains = ["~."];
+      fallbackDns = ["1.1.1.1#one.one.one.one" "1.0.0.1#one.one.one.one"];
+      dnsovertls = "true";
+    };
+    tailscale = {
+      enable = true;
+    };
+    vsftpd = {
+      enable = true;
+      writeEnable = true;
+      localUsers = true;
+      userlist = ["dgraham" "root" "nginx"];
+      userlistEnable = true;
+      virtualUseLocalPrivs = true;
+    };
+    memcached.enable = true;
     avahi = {
       enable = true;
       nssmdns4 = true;
       openFirewall = true;
     };
-  certmgr.renewInterval = "30m";
-  cockpit = {
+    certmgr.renewInterval = "30m";
+    cockpit = {
       enable = true;
       port = 9090;
       settings = {
@@ -587,102 +586,104 @@ services = {
           AllowUnencrypted = true;
         };
       };
-  };
-  openssh = {
-    enable = true;
-    openFirewall = false;
-    settings = {
-      PermitRootLogin = "yes";
-      AllowGroups = ["wheel" "root"];
     };
-    allowSFTP = true;
+    openssh = {
+      enable = true;
+      openFirewall = false;
+      settings = {
+        PermitRootLogin = "yes";
+        AllowGroups = ["wheel" "root"];
+      };
+      allowSFTP = true;
+    };
+    fwupd.enable = true;
+    xrdp.enable = false;
+    plex = {
+      enable = true;
+      openFirewall = true;
+    };
+    xserver = {
+      enable = false;
+      xkb = {
+        layout = "us";
+        variant = "";
+      };
+    };
+    greetd = {
+      enable = true;
+      vt = 12;
+      settings = rec {
+        initial_session = {
+          command = "Hyprland";
+          user = "dgraham";
+        };
+        default_session = initial_session;
+        #{
+        # Wayland Desktop Manager is installed only for user ryan via home-manager!
+        # user = "dgraham";
+        # .wayland-session is a script generated by home-manager, which links to the current wayland compositor(sway/hyprland or others).
+        # with such a vendor-no-locking script, we can switch to another wayland compositor without modifying greetd's config here.
+        # command = "$HOME/.wayland-session"; # start a wayland session directly without a login manager
+        # command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --cmd Hyprland"; # start Hyprland with a TUI login manager
+        #};
+      };
+    };
+    smartd = {
+      enable = false;
+      autodetect = true;
+    };
+    libinput.enable = true;
+    fstrim.enable = true;
+    gvfs.enable = true;
+    flatpak.enable = true;
+    printing = {
+      enable = true;
+      drivers = [
+        pkgs.brlaser
+      ];
+    };
+    gnome.gnome-keyring.enable = true;
+    ipp-usb.enable = true;
+    syncthing = {
+      enable = false;
+      user = "${username}";
+      dataDir = "/home/${username}";
+      configDir = "/home/${username}/.config/syncthing";
+    };
+    pipewire = {
+      enable = true;
+      alsa.enable = true;
+      alsa.support32Bit = true;
+      pulse.enable = true;
+    };
+    rpcbind.enable = false;
+    nfs.server.enable = false;
   };
-  fwupd.enable = true;
-  xrdp.enable = false;
-  plex = {
-    enable = true;
-    openFirewall = true;
-  };
-  xserver = {
-    enable = false;
-    xkb = {
-      layout = "us";
-      variant = "";
+  hardware = {
+    sane = {
+      enable = true;
+      extraBackends = [pkgs.sane-airscan];
+      disabledDefaultBackends = ["escl"];
+    };
+    # Extra Logitech Support
+    logitech.wireless = {
+      enable = true;
+      enableGraphical = true;
+    };
+    # Bluetooth Support
+    bluetooth = {
+      enable = true;
+      powerOnBoot = true;
+    };
+    # Enable sound with pipewire.
+    # sound.enable = true;
+    pulseaudio.enable = false;
+    graphics = {
+      enable = true;
     };
   };
-  greetd = {
-    enable = true;
-    vt = 12;
-    settings = rec {
-      initial_session = { command = "Hyprland"; user = "dgraham"; };
-      default_session = initial_session;
-      #{
-      # Wayland Desktop Manager is installed only for user ryan via home-manager!
-      # user = "dgraham";
-      # .wayland-session is a script generated by home-manager, which links to the current wayland compositor(sway/hyprland or others).
-      # with such a vendor-no-locking script, we can switch to another wayland compositor without modifying greetd's config here.
-      # command = "$HOME/.wayland-session"; # start a wayland session directly without a login manager
-      # command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --cmd Hyprland"; # start Hyprland with a TUI login manager
-      #};
-    };
-  };
-  smartd = {
-    enable = false;
-    autodetect = true;
-  };
-  libinput.enable = true;
-  fstrim.enable = true;
-  gvfs.enable = true;
-  flatpak.enable = true;
-  printing = {
-    enable = true;
-    drivers = [
-    pkgs.brlaser
-    ];
-  };
-  gnome.gnome-keyring.enable = true;
-  ipp-usb.enable = true;
-  syncthing = {
-    enable = false;
-    user = "${username}";
-    dataDir = "/home/${username}";
-    configDir = "/home/${username}/.config/syncthing";
-  };
-  pipewire = {
-    enable = true;
-    alsa.enable = true;
-    alsa.support32Bit = true;
-    pulse.enable = true;
-  };
-  rpcbind.enable = false;
-  nfs.server.enable = false;
-};
-hardware = {
-  sane = {
-    enable = true;
-    extraBackends = [pkgs.sane-airscan];
-    disabledDefaultBackends = ["escl"];
-  };
-# Extra Logitech Support
-  logitech.wireless = { 
-    enable = true;
-    enableGraphical = true;
-  };
-# Bluetooth Support
-  bluetooth = {
-    enable = true;
-    powerOnBoot = true;
-  };
-# Enable sound with pipewire.
-# sound.enable = true;
-  pulseaudio.enable = false;
-  graphics = {
-    enable = true;
-  };
-};
-# Security / Polkit
-security = 
-  {
+  # Security / Polkit
+  security = {
     doas = {
       enable = true;
       wheelNeedsPassword = false;
@@ -700,55 +701,55 @@ security =
     polkit = {
       enable = true;
       extraConfig = ''
-        polkit.addRule(function(action, subject) {
-          if (
-            subject.isInGroup("users")
-              && (
-              action.id == "org.freedesktop.login1.reboot" ||
-              action.id == "org.freedesktop.login1.reboot-multiple-sessions" ||
-              action.id == "org.freedesktop.login1.power-off" ||
-              action.id == "org.freedesktop.login1.power-off-multiple-sessions"
+            polkit.addRule(function(action, subject) {
+              if (
+                subject.isInGroup("users")
+                  && (
+                  action.id == "org.freedesktop.login1.reboot" ||
+                  action.id == "org.freedesktop.login1.reboot-multiple-sessions" ||
+                  action.id == "org.freedesktop.login1.power-off" ||
+                  action.id == "org.freedesktop.login1.power-off-multiple-sessions"
+                )
             )
-        )
-      {
-        return polkit.Result.YES;
-      }
-    })
-    '';
+          {
+            return polkit.Result.YES;
+          }
+        })
+      '';
     };
     pam.services.swaylock = {
       text = ''
         auth include login
       '';
     };
- };
-# Optimization settings and garbage collection automation
-nix = {
-  settings = {
-    auto-optimise-store = true;
-    experimental-features = [
-      "nix-command"
-      "flakes"
-    ];
-    substituters = ["https://hyprland.cachix.org"];
-    trusted-public-keys = ["hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="];
   };
-  gc = {
-    automatic = true;
-    dates = "daily";
-    options = "--delete-older-than 7d";
+  # Optimization settings and garbage collection automation
+  nix = {
+    settings = {
+      auto-optimise-store = true;
+      experimental-features = [
+        "nix-command"
+        "flakes"
+      ];
+      substituters = ["https://hyprland.cachix.org"];
+      trusted-public-keys = ["hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="];
+    };
+    gc = {
+      automatic = true;
+      dates = "daily";
+      options = "--delete-older-than 7d";
+    };
   };
-};
-# Virtualization / Containers
-virtualisation = {
-  libvirtd.enable = true;
-  podman = {
-    enable = true;
-    #dockerCompat = true;
-    defaultNetwork.settings.dns_enabled = true;
+  # Virtualization / Containers
+  virtualisation = {
+    libvirtd.enable = true;
+    podman = {
+      enable = true;
+      #dockerCompat = true;
+      defaultNetwork.settings.dns_enabled = true;
+    };
+    docker.enable = true;
   };
-  docker.enable = true;
-};
   # This value determines the OS release from which the default
   # settings for stateful data, like file locations and database versions
   # on your system were taken. It‘s perfectly fine and recommended to leave
