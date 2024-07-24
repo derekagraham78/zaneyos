@@ -26,7 +26,7 @@
     # This is for OBS Virtual Cam Support
     kernelParams = ["reboot=acpi" "coretemp"];
     extraModulePackages = [config.boot.kernelPackages.ddcci-driver];
-    kernelModules = ["drivetemp" "ddcci_backlight"];
+    kernelModules = ["drivetemp" "ddcci_driver"];
     # Needed For Some Steam Games
     kernel.sysctl = {
       "vm.max_map_count" = 2147483642;
