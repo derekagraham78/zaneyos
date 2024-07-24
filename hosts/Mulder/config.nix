@@ -275,6 +275,7 @@
             TAG+="systemd",\
             ENV{SYSTEMD_WANTS}+="ddcci@$kernel.service"
         '';
+      };
       "ddcci@" = {
         scriptArgs = "%i";
         script = ''
