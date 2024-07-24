@@ -24,7 +24,7 @@
     # Kernel
     kernelPackages = pkgs.linuxPackages_zen;
     # This is for OBS Virtual Cam Support
-    kernelParams = ["reboot=acpi" "coretemp"];
+    kernelParams = ["reboot=acpi" "coretemp" "i915.force_probe=0152"];
     extraModulePackages = [config.boot.kernelPackages.ddcci-driver];
     kernelModules = ["drivetemp" "ddcci_driver" "i2c-dev" "ddci_backlight"];
     # Needed For Some Steam Games
