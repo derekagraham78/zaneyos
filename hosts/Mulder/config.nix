@@ -267,24 +267,6 @@
   };
   systemd = {
     services = {
-      "ddcci@" = {
-        scriptArgs = "%i";
-        script = ''
-          echo Trying to attach ddcci to $1
-          i=0
-          id=$(echo $1 | cut -d "-" -f 2)
-          counter=5
-          while [ $counter -gt 0 ]; do
-            if ${pkgs.ddcutil}/bin/ddcutil getvcp 10 -b $id; then
-            echo ddcci 0x37 > /sys/bus/i2c/devices/$1/new_device
-            break
-          fi
-          sleep 1
-          counter=$((counter - 1))
-        '';
-        serviceConfig.Type = "oneshot";
-      };
-
       ownership = {
         path = [pkgs.zsh];
         serviceConfig = {
@@ -567,15 +549,6 @@
 
   # Services to start
   services = {
-    udev = {
-      extraRules = ''
-        SUBSYSTEM=="i2c-dev", ACTION=="add",\
-          ATTR{name}=="NVIDIA i2c adapter*",\
-          TAG+="ddcci",\
-          TAG+="systemd",\
-          ENV{SYSTEMD_WANTS}+="ddcci@$kernel.service"
-      '';
-    };
     emacs = {
       enable = false;
       package = pkgs.emacs;
@@ -690,6 +663,7 @@
     nfs.server.enable = false;
   };
   hardware = {
+    i2c.enable = true;
     sane = {
       enable = true;
       extraBackends = [pkgs.sane-airscan];
