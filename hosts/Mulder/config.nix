@@ -26,7 +26,7 @@
     # This is for OBS Virtual Cam Support
     kernelParams = ["reboot=acpi" "coretemp"];
     extraModulePackages = [config.boot.kernelPackages.ddcci-driver];
-    kernelModules = ["drivetemp" "ddcci_driver"];
+    kernelModules = ["drivetemp" "ddcci_driver" "i2c"];
     # Needed For Some Steam Games
     kernel.sysctl = {
       "vm.max_map_count" = 2147483642;
@@ -549,6 +549,9 @@
 
   # Services to start
   services = {
+    udev.extraRules = ''
+      KERNEL=="i2c-[0-*", GROUP="i2c", MODE="0660"
+    '';
     ddccontrol.enable = true;
     emacs = {
       enable = false;

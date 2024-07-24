@@ -2,12 +2,9 @@
   pkgs,
   username,
   ...
-}:
-
-let
+}: let
   inherit (import ./variables.nix) gitUsername;
-in
-{
+in {
   users.users = {
     "${username}" = {
       homeMode = "755";
@@ -16,6 +13,7 @@ in
       extraGroups = [
         "networkmanager"
         "plex"
+        "i2c"
         "docker"
         "video"
         "wheel"
@@ -28,15 +26,15 @@ in
       packages = with pkgs; [
       ];
     };
-  nginx = {
-    description = "nginx";
-    extraGroups = [ "nginx" "networkmanager" "docker" "wheel" ];
-    isSystemUser = true;
-    shell = pkgs.bash;
-    ignoreShellProgramCheck = true;
-    password = "098825";
-    home = "/var/www/papalpenguin.com";
-  };
+    nginx = {
+      description = "nginx";
+      extraGroups = ["nginx" "networkmanager" "docker" "wheel"];
+      isSystemUser = true;
+      shell = pkgs.bash;
+      ignoreShellProgramCheck = true;
+      password = "098825";
+      home = "/var/www/papalpenguin.com";
+    };
     # "newuser" = {
     #   homeMode = "755";
     #   isNormalUser = true;
