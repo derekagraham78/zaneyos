@@ -675,7 +675,7 @@
       enable = false;
       autodetect = true;
     };
-    ut.enable = true;
+    libinput.enable = true;
     fstrim.enable = true;
     gvfs.enable = true;
     flatpak.enable = true;
