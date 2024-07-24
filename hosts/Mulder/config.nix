@@ -710,7 +710,6 @@
     opengl = {
       enable = true;
       driSupport32Bit = true;
-      driSupport = true;
       extraPackages = [
         #pkgs.vaapiIntel
         #pkgs.vaapiVdpau
@@ -741,6 +740,14 @@
     pulseaudio.enable = false;
     graphics = {
       enable = true;
+      extraPackages = [
+        #pkgs.vaapiIntel
+        #pkgs.vaapiVdpau
+        pkgs.intel-media-sdk
+        pkgs.intel-media-driver
+        #pkgs.libvdpau-va-gl
+        #pkgs.intel-vaapi-driver
+      ];
     };
   };
   # Security / Polkit
