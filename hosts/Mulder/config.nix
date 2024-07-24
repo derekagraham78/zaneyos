@@ -549,6 +549,7 @@
 
   # Services to start
   services = {
+    ddccontrol.enable = true;
     emacs = {
       enable = false;
       package = pkgs.emacs;
