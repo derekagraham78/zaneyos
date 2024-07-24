@@ -375,6 +375,7 @@
     yad
     inxi
     pkgs.wlr-randr
+    pkgs.wl-gammactl
     playerctl
     nh
     nixfmt-rfc-style
