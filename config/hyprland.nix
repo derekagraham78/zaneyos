@@ -40,7 +40,6 @@ in
             env = GDK_BACKEND,wayland
             env = CLUTTER_BACKEND,wayland
             env = QT_QPA_PLATFORM,wayland
-            env = QT_QPA_PLATFORMTHEME,qt5ct
             env = XCURSOR_SIZE,32
             env = SDL_VIDEODRIVER,wayland
             env = MOZ_ENABLE_WAYLAND,1
