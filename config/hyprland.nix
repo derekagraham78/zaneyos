@@ -37,9 +37,9 @@ in
             env = XDG_CURRENT_DESKTOP, Hyprland
             env = XDG_SESSION_TYPE, wayland
             env = XDG_SESSION_DESKTOP, Hyprland
-            env = GDK_BACKEND, wayland, x11,*
+            env = GDK_BACKEND, wayland
             env = CLUTTER_BACKEND, wayland
-            env = QT_QPA_PLATFORM=wayland;xcb
+            env = QT_QPA_PLATFORM=wayland
             env = XCURSOR_SIZE,32
             env = SDL_VIDEODRIVER, wayland
             env = MOZ_ENABLE_WAYLAND, 1
@@ -54,7 +54,7 @@ in
             exec-once = killall -q swaync;sleep .5 && swaync
             exec-once = nm-applet --indicator
             exec-once = lxqt-policykit-agent
-            # Minitor Setup
+            # Monitor Setup
             monitor=HDMI-A-3, 1920x1080, auto-left, 1
             monitor=HDMI-A-1, 1920x1080, auto-right, 1
             #xwayland {

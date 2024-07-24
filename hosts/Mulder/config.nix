@@ -326,6 +326,8 @@
   };
   environment.systemPackages = with pkgs; [
     pkgs.vscode-fhs
+    pkgs.gdb
+
     pkgs.ddcutil
     pkgs.gnomeExtensions.brightness-control-using-ddcutil
     pkgs.i2c-tools
@@ -370,6 +372,19 @@
     bat
     pkg-config
     meson
+    pkgs.xorg.libxcb
+    pkgs.xorg.xcbproto
+    pkgs.xorg.xcbutilkeysyms
+    pkgs.xorg.libXfixes
+    pkgs.xorg.libX11
+    pkgs.xorg.libXcomposite
+    pkgs.xorg.xinput
+    pkgs.xorg.libXrender
+
+    pkgs.pixman
+    pkgs.wlr-protocols
+    pkgs.cairo
+
     hyprpicker
     ninja
     brightnessctl
@@ -391,6 +406,11 @@
     file-roller
     swww
     waypaper
+    pkgs.pango
+    pkgs.seatd
+    pkgs.libxkbcommon
+    pkgs.xorg.xcbutilwm
+
     swaynotificationcenter
     imv
     mpv
@@ -484,13 +504,25 @@
     yarn2nix
     yarn
     qt6.qt5compat
+    pkgs.libsForQt5.qt5ct
+    pkgs.kdePackages.qt6ct
     pkgs.qt6.full
     libsForQt5.full
     pkgs.nodePackages_latest.pnpm
     freetype
     fontconfig
     gnumake
-    gcc13
+    pkgs.gcc49Stdenv
+    pkgs.cmake
+    pkgs.libliftoff
+    pkgs.libdisplay-info
+    pkgs.cpio
+    pkgs.tomlplusplus
+    pkgs.hyprlang
+    pkgs.hyprcursor
+    pkgs.hyprwayland-scanner
+    pkgs.xorg.xcbutilerrors
+    pkgs.hyprutils
     rPackages.trekfont
     pkgs.gnome-system-monitor
     pkgs.gnome.nautilus
@@ -643,7 +675,7 @@
       enable = false;
       autodetect = true;
     };
-    libinput.enable = true;
+    ut.enable = true;
     fstrim.enable = true;
     gvfs.enable = true;
     flatpak.enable = true;
