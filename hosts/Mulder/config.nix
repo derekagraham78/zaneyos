@@ -267,6 +267,13 @@
   };
   systemd = {
     services = {
+      udev.extraRules = ''
+        SUBSYSTEM=="i2c-dev", ACTION=="add",\
+          ATTR{name}=="NVIDIA i2c adapter*",\
+          TAG+="ddcci",\
+          TAG+="systemd",\
+          ENV{SYSTEMD_WANTS}+="ddcci@$kernel.service"
+      '';
       "ddcci@" = {
         scriptArgs = "%i";
         script = ''
