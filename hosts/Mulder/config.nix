@@ -328,7 +328,6 @@
   environment.systemPackages = with pkgs; [
     pkgs.vscode-fhs
     pkgs.gdb
-
     pkgs.ddcutil
     pkgs.gnomeExtensions.brightness-control-using-ddcutil
     pkgs.i2c-tools

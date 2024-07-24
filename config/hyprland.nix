@@ -31,19 +31,19 @@ in
         concatStrings [
           ''
             # Environment Variables
-            env = NIXPKGS_ALLOW_UNFREE, 1
-            env = NIXOS_OZONE_WL=1
+            env = NIXPKGS_ALLOW_UNFREE,1
+            env = NIXOS_OZONE_WL,1
             env = QT_AUTO_SCREEN_SCALE_FACTOR,1
-            env = XDG_CURRENT_DESKTOP, Hyprland
-            env = XDG_SESSION_TYPE, wayland
-            env = XDG_SESSION_DESKTOP, Hyprland
-            env = GDK_BACKEND, wayland
-            env = CLUTTER_BACKEND, wayland
-            env = QT_QPA_PLATFORM=wayland
+            env = XDG_CURRENT_DESKTOP,Hyprland
+            env = XDG_SESSION_TYPE,wayland
+            env = XDG_SESSION_DESKTOP,Hyprland
+            env = GDK_BACKEND,wayland
+            env = CLUTTER_BACKEND,wayland
+            env = QT_QPA_PLATFORM,wayland
             env = QT_QPA_PLATFORMTHEME,qt5ct
             env = XCURSOR_SIZE,32
-            env = SDL_VIDEODRIVER, wayland
-            env = MOZ_ENABLE_WAYLAND, 1
+            env = SDL_VIDEODRIVER,wayland
+            env = MOZ_ENABLE_WAYLAND,1
             # Startup Apps
             exec-once = swww-daemon --format xrgb
             exec-once = swayidle -C ~/.config/swayidle/idle.conf
