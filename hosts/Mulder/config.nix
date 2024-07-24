@@ -703,6 +703,15 @@
     nfs.server.enable = false;
   };
   hardware = {
+    opengl = {
+      enable = true;
+      driSupport32Bit = true;
+      extraPackages = [
+        pkgs.vaapiIntel
+        pkgs.vaapiVdpau
+        pkgs.libvdpau-va-gl
+      ];
+    };
     i2c.enable = true;
     sane = {
       enable = true;
