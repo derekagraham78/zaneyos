@@ -709,6 +709,8 @@
       extraPackages = [
         pkgs.vaapiIntel
         pkgs.vaapiVdpau
+        intel_media-sdk
+        pkgs.intel-media-driver
         pkgs.libvdpau-va-gl
       ];
     };
