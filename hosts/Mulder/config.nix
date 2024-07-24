@@ -324,6 +324,7 @@
   users = {
     mutableUsers = true;
   };
+  environment.sessionVariables.NIXOS_OZONE_WL = "1";
   environment.systemPackages = with pkgs; [
     pkgs.vscode-fhs
     pkgs.gdb
