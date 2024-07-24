@@ -326,6 +326,8 @@
   };
   environment.systemPackages = with pkgs; [
     pkgs.vscode-fhs
+    pkgs.ddcutil
+    pkgs.ddcui
     pkgs.fontconfig
     pkgs.kdePackages.gwenview
     pkgs.sway
