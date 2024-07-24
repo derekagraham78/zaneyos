@@ -24,9 +24,9 @@
     # Kernel
     kernelPackages = pkgs.linuxPackages_zen;
     # This is for OBS Virtual Cam Support
-    kernelModules = ["drivetemp"];
     kernelParams = ["reboot=acpi" "coretemp"];
-    extraModulePackages = [];
+    extraModulePackages = [config.boot.kernelPackages.ddcci-driver];
+    kernelModules = ["drivetemp" "ddcci_backlight"];
     # Needed For Some Steam Games
     kernel.sysctl = {
       "vm.max_map_count" = 2147483642;
@@ -267,6 +267,19 @@
   };
   systemd = {
     services = {
+      "ddcci@" = {
+        scriptArgs = "%i";
+        script = ''
+            echo Trying to attach ddcci to $1
+            i=0
+            id=$(echo $1 | cut -d "-" -f 2)
+            if ${pkgs.ddcutil}/bin/ddcutil getvcp 10 -b $id; then
+            echo ddcci 0x37 > /sys/bus/i2c/devices/$1/new_device
+          fi
+        '';
+        serviceConfig.Type = "oneshot";
+      };
+
       ownership = {
         path = [pkgs.zsh];
         serviceConfig = {
