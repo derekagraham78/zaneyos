@@ -328,6 +328,7 @@
     pkgs.vscode-fhs
     pkgs.ddcutil
     pkgs.gnomeExtensions.brightness-control-using-ddcutil
+    pkgs.i2c-tools
     pkgs.ddcui
     pkgs.fontconfig
     pkgs.kdePackages.gwenview
