@@ -36,6 +36,7 @@ in
             env = QT_AUTO_SCREEN_SCALE_FACTOR,1
             env = XDG_CURRENT_DESKTOP,Hyprland
             env = ELECTRON_OZONE_PLATFORM_HINT,auto
+            env = LIBVA_DRIVER_NAME,iHD
             env = XDG_SESSION_TYPE,wayland
             env = XDG_SESSION_DESKTOP,Hyprland
             env = GDK_BACKEND,wayland,x11,*

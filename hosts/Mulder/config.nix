@@ -324,6 +324,10 @@
   users = {
     mutableUsers = true;
   };
+  environment.variables = {
+    LIBVA_DRIVER_NAME = "i915";
+    VDPAU_DRIVER = lib.mkIf config.hardware.opengl.enable (lib.mkDefault "va_gl");
+  };
   environment.sessionVariables.NIXOS_OZONE_WL = "1";
   environment.systemPackages = with pkgs; [
     pkgs.vscode-fhs
