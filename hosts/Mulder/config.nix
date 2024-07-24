@@ -716,6 +716,7 @@
         pkgs.intel-media-sdk
         pkgs.intel-media-driver
         pkgs.libvdpau-va-gl
+        pkgs.intel-vaapi-driver
       ];
     };
     i2c.enable = true;
