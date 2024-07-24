@@ -32,15 +32,15 @@ in
           ''
             # Environment Variables
             env = NIXPKGS_ALLOW_UNFREE,1
-            #env = NIXOS_OZONE_WL,1
+            env = NIXOS_OZONE_WL,1
             env = QT_AUTO_SCREEN_SCALE_FACTOR,1
             env = XDG_CURRENT_DESKTOP,Hyprland
             env = XDG_SESSION_TYPE,wayland
             env = XDG_SESSION_DESKTOP,Hyprland
             env = GDK_BACKEND,wayland,x11,*
-            #env = QT_QPA_PLATFORMTHEME,qt5ct
+            env = QT_QPA_PLATFORMTHEME,qt5ct
             env = CLUTTER_BACKEND,wayland
-            #env = QT_QPA_PLATFORM,wayland;xcb
+            env = QT_QPA_PLATFORM,wayland;xcb
             env = XCURSOR_SIZE,32
             env = SDL_VIDEODRIVER,wayland
             env = MOZ_ENABLE_WAYLAND,1
@@ -58,9 +58,9 @@ in
             # Monitor Setup
             monitor=HDMI-A-3, 1920x1080, auto-left, 1
             monitor=HDMI-A-1, 1920x1080, auto-right, 1
-            #xwayland {
-            #    force_zero_scaling = false;
-            #         }
+            xwayland {
+                force_zero_scaling = false;
+                     }
             # toolkit-specific scale
             # env = GDK_SCALE,1
             # Workspace Configuration

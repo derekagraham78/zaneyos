@@ -171,7 +171,7 @@
     };
     xfconf.enable = true;
     hyprland.enable = true;
-    xwayland.enable = true;
+    xwayland.enable = false;
     firefox.enable = true;
     starship = {
       enable = true;
