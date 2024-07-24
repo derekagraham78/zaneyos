@@ -711,7 +711,7 @@
       enable = true;
       driSupport32Bit = true;
       extraPackages = [
-        pkgs.vaapiIntel
+        #pkgs.vaapiIntel
         pkgs.vaapiVdpau
         pkgs.intel-media-sdk
         pkgs.intel-media-driver
