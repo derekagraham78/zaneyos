@@ -37,9 +37,10 @@ in
             env = XDG_CURRENT_DESKTOP,Hyprland
             env = XDG_SESSION_TYPE,wayland
             env = XDG_SESSION_DESKTOP,Hyprland
-            env = GDK_BACKEND,wayland
+            env = GDK_BACKEND,wayland,x11,*
+            env = QT_QPA_PLATFORMTHEME,qt5ct
             env = CLUTTER_BACKEND,wayland
-            env = QT_QPA_PLATFORM,wayland
+            env = QT_QPA_PLATFORM,wayland;xcb
             env = XCURSOR_SIZE,32
             env = SDL_VIDEODRIVER,wayland
             env = MOZ_ENABLE_WAYLAND,1
